@@ -1,9 +1,6 @@
 #include <iostream>
 using namespace std;
 
-//++++++++++++++++++HELLO BHAI ---------------
-
-
 //*************baisc calculator*************
 int sum(int a, int b);
 int mul(int a, int b);
