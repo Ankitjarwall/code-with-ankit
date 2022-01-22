@@ -1,6 +1,6 @@
 #include<iostream>
-#include<iomanip>
 using namespace std;
+
 
 class lpu
 {   
@@ -15,9 +15,9 @@ class lpu
     }
     void display()
     {
-        cout<<setw<<"value "<<a<<endl;  
-        cout<<setw<<"value "<<b<<endl;  
-        cout<<"value "<<a+b<<setw<<endl;  
+        cout<<"value "<<a<<endl;  
+        cout<<"value "<<b<<endl;  
+        cout<<"value "<<a+b<<endl;  
     }
 }name1;
 
@@ -31,6 +31,10 @@ int main()
     cin>>b;
     name1.add(a,b);
     name1.display();
+cout<<"ankit meena";
+
+
+
     return 0;
 
 }
