@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main()
 {
+    int main 
     int area, sign, circle, pi = 3.14, radius, length, width;
     int ractangle, side, square, base, height, triangle;
     char exit;
