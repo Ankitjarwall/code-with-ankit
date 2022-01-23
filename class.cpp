@@ -15,9 +15,9 @@ class lpu
     }
     void display()
     {
-        cout<<"value "<<a<<endl;  
-        cout<<"value "<<b<<endl;  
-        cout<<"value "<<a+b<<endl;  
+        cout<<"value A "<<a<<endl;  
+        cout<<"value B "<<b<<endl;  
+        cout<<"sum A + b = "<<a+b<<endl;  
     }
 }name1;
 
@@ -31,9 +31,6 @@ int main()
     cin>>b;
     name1.add(a,b);
     name1.display();
-cout<<"ankit meena";
-
-
 
     return 0;
 
