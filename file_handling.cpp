@@ -13,7 +13,8 @@ int main()
 
     //p = fopen("file.txt", "r");
     char name1[20];
-    fgets(p,"%s",name1);
+    fgets(name1,"%s",p);
+    cout<<name1;
     fclose(p);
 
     return 0;

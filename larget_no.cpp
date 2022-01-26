@@ -14,14 +14,12 @@ int main()
     {
         if (a > c)
         {
+
             cout << "The highest number is A.";
         }
-    }
-    else if (b > a)
-    {
-        if (b > c)
+        if (a < c)
         {
-            cout << "The highest number is b.";
+            cout << "The highest number is c.";
         }
     }
     else if (c > a)
@@ -30,7 +28,23 @@ int main()
         {
             cout << "The highest number is c.";
         }
+        if (c < b)
+        {
+            cout << "The highest number is b.";
+        }
     }
+    else if (b > a)
+    {
+        if (b > c)
+        {
+            cout << "The highest number is b.";
+        }
+        if (b < c)
+        {
+            cout << "The highest number is c.";
+        }
+    }
+
     else
     {
         cout << "INVALID";
