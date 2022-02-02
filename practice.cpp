@@ -2,17 +2,15 @@
 using namespace std;
 int main()
 {
-    int a = 9;
-    for (int i = 2; i < a; i++)
-    {
-        if (i % a == 0)
-        {
-            cout << "The number is not prime number."<<endl;
-        }
-        else
-        {
-            cout << "the number is prime number."<<endl;
-        }
-    }
+    int a = 0, b = 0;
+    cout << "Enter the number : ";
+    cin >> a;       //5
+
+    b = a++ + a++ + a++ + ++a;
+    //b = 8++ + 7++ + 6++ + 6;
+
+    cout << "A Value :" << a<<endl;//9
+    cout << "B Value :" << b<<endl;//24//27
+
     return 0;
 }
