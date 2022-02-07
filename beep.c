@@ -15,6 +15,6 @@ int main()
     Beep(415,232);
     Beep(370,465);
     Beep(370,232);
-    
+
     return 0;
 }

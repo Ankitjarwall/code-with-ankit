@@ -5,10 +5,8 @@ class lpu
 {
 private:
     int p_mark = 0, p_roll = 0;
-
     void cal()
     {
-
         cout << "Private Mark = " << p_mark << endl;
         cout << "Private Roll = " << p_roll << endl;
     }
@@ -16,12 +14,11 @@ private:
 public:
     void total(int mark1, int roll1)
     {
-        lpu kal;
         p_mark = mark1;
         p_roll = roll1;
         cout << "Public Mark = " << p_mark << endl;
         cout << "Public Roll = " << p_roll << endl;
-        kal.cal();
+        cal();
     }
 
     void sum(int a, int b);

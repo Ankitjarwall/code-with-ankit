@@ -1,14 +1,2 @@
-#include <stdio.h> //header file
-
-int main() //main body
-{
-    int grade = 0, a = 0; //variable
-
-    printf("A ");
-    scanf("%d", &grade); //user input 5
-
-    a = ++grade;
-    printf("A = %d", a);
-
-    return 0;
-}
+create table course
+(Course_id int, Course_Name varchar(50), Student_Id int, Student_Name varchar(50),DOB date, email varchar(70), Address varchar(100), Phone_Number int);
