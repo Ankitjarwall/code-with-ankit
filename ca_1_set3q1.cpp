@@ -3,10 +3,15 @@ using namespace std;
 int main()
 {
     int prime, k = 2, i = 2;
-    cout << "Enter the number :";
+    cout << "Enter the first number :";
+    cin >> i;
+    cout << "Enter the last number :";
     cin >> prime;
-
-    for (i = 2; i < prime; i++)
+    if (i > prime)
+    {
+        prime = (i + prime) - (i = prime);
+    }
+    while (i < prime)
     {
         for (k = 2; k < i; k++)
         {
@@ -20,6 +25,8 @@ int main()
         {
             cout << k << " ";
         }
+        i++;
     }
+   
     return 0;
 }

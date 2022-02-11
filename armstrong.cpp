@@ -6,18 +6,18 @@ int main()
     cout << "Enter a three-digit integer: ";
     cin >> num;
 
-     originalNum = num;
+    originalNum = num;
 
     while (originalNum != 0)
     {
         remainder = originalNum % 10;
-        a=num;
+        a = num;
         while (a != 0)
         {
             b = remainder * b;
 
             result += b;
-            a=a/10;
+            a = a / 10;
         }
 
         originalNum /= 10;

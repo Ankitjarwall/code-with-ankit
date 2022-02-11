@@ -2,60 +2,32 @@
 using namespace std;
 int main()
 {
-    int a, k, i;
-    cout << "Enter the number :";
-    cin >> a;
-    for (i = 2; i < a; i++)
+    int input = 0, input_2 = 0, i = 0, j = 2, update = 0;
+    cout << "Initial Number:";
+    cin >> input;
+    cout << "Final Number:";
+    cin >> input_2;
+
+    if (input > input_2)
     {
-        for (k = 2; k < i; k++)
+        input_2 = (input * input_2) / (input = input_2);
+    }
+
+    for (i = input; i <= input_2; i++)
+    {
+        update = 1;
+        for (j = 2; j <= i / 2; j++)
         {
-            if (i % k == 0)
+            if (i % j == 0)
             {
-                cout << "";
+                update = 0;
                 break;
             }
         }
-        if (k == i)
+        if (update == 1 && i >= 2)
         {
-            cout << k << " ";
+            cout << i << " ";
         }
     }
     return 0;
 }
-
-
-// #include <stdio.h>
-// #include <iostream.h>
-// int main()
-// {
-// int in,fn;
-// int i,j,flag;
-// int count=0;
-// cout<<"Enter initial number:";
-// cin>>in;
-// cout<<"Enter final number:";
-// cin>>fn;
-// if(in>fn)
-// {
-// fn=(in+fn)-(in=fn);
-// }
-// for(i=in;i<=fn;i++)
-// {
-// flag=1;
-// for(j=2;j<=i/2;j++)
-// {
-// if(i%j==0)
-// {
-// flag=0;
-// break;
-// }
-// }
-// if(flag==1 && i>=2)
-// {
-// cout<<i<<" ";
-// count++;
-// }
-// }
-// cout<<endl<<"Total primes are = "<<count;
-// return 0;
-// }

@@ -2,24 +2,26 @@
 using namespace std;
 int main() // main body.
 {
-    int math = 0, hindi = 0, english = 0; // varibale declaration.
+    int math = 0, hindi = 0, english = 0, science = 0, sst = 0; // varibale declaration.
 
-    cout << "\n*  *  *  *  *  *  * *  *  *  *  *\n";
-    cout << "\tMath : ";
+    cout << "Math : ";
     cin >> math; // user input I.e : 87
-    cout << "*\t\t\t\t*\n";
 
-    cout << "\tHindi : ";
+    cout << "Hindi : ";
     cin >> hindi; // user input I.e : 91
-    cout << "*\t\t\t\t*\n";
 
-    cout << "\tEnglish : ";
+    cout << "English : ";
     cin >> english; // user input I.e : 88
-    cout << "*\t\t\t\t*\n";
 
-    cout << "\tTotal mark : " << math + hindi + english << endl; // output.
-    cout << "*\tPercentage : " << (math + hindi + english) / 3.0 << "%"
-         << " \t*" << endl; // ouput.
-    cout << "\n*  *  *  *  *  *  * *  *  *  *  *\n"<<endl;
+    cout << "Science : ";
+    cin >> science; // user input I.e : 88
+
+    cout << "Sst : ";
+    cin >> sst; // user input I.e : 88
+
+    cout << "\tTotal mark : " << math + hindi + english + science + sst << endl; // output.
+    cout << "\tPercentage : " << (math + hindi + english + science + sst) / 5.0 << "%"
+         << " \t" << endl; // ouput.
+    
     return 0;
 }

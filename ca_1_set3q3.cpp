@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    cout << "The 1st 100 odd numbers are : ";
+    cout << "starting 100 odd numbers are : ";
     int number = 0;
     for (int i = 1; i > 0; i++)
     {

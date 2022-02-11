@@ -2,15 +2,15 @@
 using namespace std;
 int main()
 {
-    int table = 0, i = 1;
-    cout << "Enter the number : ";
-    cin >> table;
-top:
-    cout << table << " x " << i << " = " << table * i << endl;
+    int user_input = 0, i = 1;
+    cout << "Table number : ";
+    cin >> user_input;
+main:
+    cout << user_input << "x" << i << "=" << user_input * i << endl;
     i++;
     if (i <= 10)
     {
-        goto top;
+        goto main;
     }
 
     return 0;

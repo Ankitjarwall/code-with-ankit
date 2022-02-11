@@ -5,15 +5,13 @@ int main() // main body.
     int table, i = 1; // variable declaration.
     cout << "\nEnter the table number : ";
     cin >> table; // user input I.e : 6
-    cout << "\n* * * * "
-         << "TABLE OF " << table << "  * * *\n*\t\t\t*" << endl;
+    cout
+        << "TABLE OF " << table << endl;
     do // do while loop.
     {
-        cout << "*\t" << table << " x " << i << " = " << i * table << " \t*" << endl; // ouput.
+        cout << table << " x " << i << " = " << i * table << endl; // ouput.
         i++;
     } while (i <= 10);
-    cout << "*\t\t\t*\n* * * * * * * * * * * * * \n"
-         << endl;
 
     return 0;
 }
