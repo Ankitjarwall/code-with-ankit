@@ -3,5 +3,9 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "iosfwd": "cpp"
-    }
+    },
+    "java.project.sourcePaths": [
+        "Andriod/Decompilation/resources/lpu code",
+        "java"
+    ]
 }

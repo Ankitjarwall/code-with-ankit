@@ -1,0 +1,14 @@
+h1,div{
+    background-color: grey;
+    color: blue;    
+}
+#one{
+    background-color: green;
+    color: brown;
+}
+.Important{
+    background-color: pink;
+}
+P.Important{
+    content: green;
+}

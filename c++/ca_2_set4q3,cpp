@@ -1,0 +1,36 @@
+Scope resolution operator ( :: ) is used for associating a function definition to a class in which it was declared. This gives us the advantage of defining member functions outside the classes.
+
+In general, function syntax is like :
+return_type class_name::function name(parameter list)
+{
+    // BODY
+}
+
+Now, a friend function is not specific to any one class.It is a “friend” to many classes.So we cannot define it using scope resolution operator because that will associate it to one and only one class.
+
+A friend function can access private and protected members of the class in which it is declared as friend.It is sometimes useful to allow a particular class to access private members of the class.The correct way to access a friend function is :
+
+#include <iostream> //header file
+    using namespace std;
+class lpu // user defined class
+{
+    int a; // private data members
+
+public:
+    // global friend function
+    friend void check(lpu x);
+};
+
+void check(lpu x)
+{
+    // Since Bca() is a friend, it can access
+    // private members of A
+    cout << "Value check of A = " << x.a; // Garbage value
+}
+
+int main()
+{
+    lpu bca;    // class object
+    check(bca); // function call
+    return 0;
+}

