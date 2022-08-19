@@ -1,31 +1,32 @@
 import java.util.Scanner;
-public class input{
-    public static void main(String[] args)
-    {
-        int num;
+
+public class input {
+    public static void main(String[] args) {
+        int num, d = 90;
         float fnum;
         double dnum;
         String name;
-        char cname;
-        
-        Scanner get=new Scanner(System.in);
+
+        Scanner get = new Scanner(System.in);
 
         System.out.print("Int : ");
-        num=get.nextInt();
+        num = get.nextInt();
+
         System.out.print("Float : ");
-        fnum=get.nextFloat();
+        fnum = get.nextFloat();
+
         System.out.print("Double : ");
-        dnum=get.nextDouble();
-        System.out.print("String : ");
-        name=get.nextLine();
-        System.out.print("Char : ");
-        //cname=get.nextChar();
+        dnum = get.nextDouble();
 
-        System.out.println("Int : "+num+"");
-        System.out.println("Float : "+num1+"");
-        System.out.println("Double : "+num2+"");
-        System.out.println("String : "+name+"");
+        get.nextLine();
 
+        System.out.print("Name : ");
+        name = get.nextLine();
+
+        System.out.println("int : " + num);
+        System.out.println("Float : " + fnum);
+        System.out.println("Double : " + dnum);
+        System.out.println("Name : " + name);
 
     }
 }

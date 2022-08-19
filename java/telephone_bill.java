@@ -1,52 +1,36 @@
-public class telephone_bill
+import java.util.Scanner;
+class tele
 {
-    public static void main(String[] args)
-        {
-            System.out.print("Main...");
-        }
-}
+    int min,price,bill;
+    String customer;
 
-class bca
-{
-    //public:
-    int disp()
+    tele()
     {
-        System.out.print("Function in outer class...");
+        price=2;
+    }
+    void input()
+    {
+        Scanner get=new Scanner(System.in);
+        System.out.print("Enter Your Name : ");
+        customer=get.nextLine();
+        System.out.print("Enter Your Min cunsumed : ");
+        min=get.nextInt();
+        calculate(min);
+        System.out.print("Total price : "+bill+" pay.");
+    }
+
+    int calculate(int fmin)
+    {
+        bill=fmin*price;
+        return bill;
     }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import java.util.Scanner;
-// public class telephone_bill {
-
-//     public static void main(String[] args) {
-         
-//        int num1 , num2 , sum;
-//        Scanner get=new Scanner(System.in);
-//        System.out.print("Enter Num 1 : ");
-//        num1=get.nextInt();
-//        System.out.print("Enter Num 2 : ");
-//        num2=get.nextInt();
-//        sum = num1 + num2;
- 
-//        System.out.println("Sum of these numbers: "+sum);
-//     }
-//  }
+public class telephone_bill{
+    static public void main(String[] args)
+    {
+        tele sum=new tele();
+        sum.input();
+    }
+}

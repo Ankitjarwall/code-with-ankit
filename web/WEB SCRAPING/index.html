@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,4 +25,259 @@
     </div>
 </body>
 
-</html>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        UMS | Lovely Professional University | University Management System
+    </title>
+    <meta
+        content="UMS - University Management System is LPU on-line portico for students and staff to access details of Academic Affairs, Attendance, Examination, Everyday Announcement and Events with one click."
+        name="description" />
+    <meta content="UMS, LPU, UMS Login, University Management System, Lovely Professional University" name="keywords" />
+    <meta content="global" name="distribution" />
+    <meta content="LPU is copyright 2005-2015" name="copyright" />
+    <meta content="General" name="rating" />
+    <meta content="En" name="language" />
+    <noscript>
+        <div
+            style="position: fixed; top: 0px; left: 0px; z-index: 3000;height: 100%; width: 100%; background-color: rgba(0,0,0,.6);padding-top:15%;text-align: center;font-family: Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana,' sans-serif';font-size: 20px;">
+            <div
+                style="display: inline-block;background-color:  rgba(255,255,255,.7);padding: 45px;-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;">
+                <img alt="" src="login_images/ums_logo.png" />
+                <hr style="border: solid 1px #ACACAC" />
+                <p style="margin-left: 10px">
+                    JavaScript of your browser is not enabled.please enable it first to access UMS
+                </p>
+                <p style="margin-left: 10px">
+                    How to enable Javascript : visit this link to step by step help
+                </p>
+                <p style="margin-left: 10px">
+                    <a href="http://activatejavascript.org/en/instructions"
+                        style="background-color: #337ab7;border-bottom-color: #2e6da4;border-left-color: #2e6da4;border-right-color: #2e6da4;border-top-color: #2e6da4;color: #fff;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding: 5px 10px;text-decoration: none">
+                        Click Here
+                    </a>
+                </p>
+            </div>
+        </div>
+    </noscript>
+    <link href="css/ums_style_2014.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript">
+    </script>
+    <script src="js/jquery.countdown.min.js" type="text/javascript">
+    </script>
+    <link href="js1/sweetalert.css" rel="stylesheet" />
+    <script src="js1/sweetalert.min.js">
+    </script>
+    <script type="text/javascript">
+        function DisplayAlert(xmsg) {
+
+            swal(
+                {
+                    title: 'UMS',
+                    text: xmsg
+                }
+
+
+            );
+        }
+    </script>
+    <style type="text/css">
+        #trStartWith select option {
+            font-size: 14px;
+        }
+
+        .countdown {
+            background: rgba(224, 74, 49, 0.70);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            float: right;
+            margin-right: 15px;
+            padding: 5px;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            width: 320px;
+        }
+
+        .countdown strong {
+            position: absolute;
+            top: 20px;
+            width: 143px;
+            right: 10px;
+        }
+
+        .countdown b {
+            font-size: 25px;
+        }
+
+        .clock_countdown {
+            color: #fff;
+            font-size: 15px;
+            font-family: "segoe_uilight";
+        }
+
+        .clock {
+            margin: 0 auto;
+            width: 60%;
+            display: block;
+            background-color: #fff;
+            color: #000;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+        }
+    </style>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-67701680-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link
+        href="/LpuUms/WebResource.axd?d=hcXDZhXiidgsQUtEo5iT30fH_dTYDJUgFegb7-OjNfbaQmVWpu3cDkxUMKjwNiV26XKE3ffGhHaDWe8_gl82smMyhxAn_O3W9R8ngAK4TWN8JwnOGFVpG-GuPuE707yFoErQccaLd8iNQTYtTb09Ca2vudHGD-czGQaFG1p9q4k1&amp;t=637887782476268860"
+        rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <form action="./LoginNew.aspx" id="form1" method="post">
+        <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden"
+            value="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" />
+        <script
+            src="/LpuUms/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmZx_1_fm7JieTmbHikZ_IID5YFFXXx4Y5TVWWxnZYePVG01HMyeQrv_eqkyIve_3CJITJGGiJcwwpXUzVpAHH9lZ0cCcmnAdKXPGGv1oGewqtMg14J95AhAczUQ9fESt1coiswLTzmG-pWLLunnpVg1&amp;t=ffffffffe6d5a9ac"
+            type="text/javascript">
+            </script>
+        <script src="/LpuUms/ScriptResource.axd?d=eE
+PS F:\GitHub\code-with-ankit> python -u " f:\GitHub\code-with-ankit\web\WEB SCRAPING\main.py" <!DOCTYPE html>
+    <html>
+        <head>
+            <title>
+                UMS | Lovely Professional University | University Management System
+            </title>
+            <meta content="UMS - University Management System is LPU on-line portico for students and staff to access details of Academic Affairs, Attendance, Examination, Everyday Announcement and Events with one click." name="description" />
+            <meta content="UMS, LPU, UMS Login, University Management System, Lovely Professional University" name="keywords" />
+            <meta content="global" name="distribution" />
+            <meta content="LPU is copyright 2005-2015" name="copyright" />
+            <meta content="General" name="rating" />
+            <meta content="En" name="language" />
+            <noscript>
+                <div style="position: fixed; top: 0px; left: 0px; z-index: 3000;height: 100%; width: 100%; background-color: rgba(0,0,0,.6);padding-top:15%;text-align: center;font-family: Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana,' sans-serif';font-size: 20px;">
+                    <div style="display: inline-block;background-color:  rgba(255,255,255,.7);padding: 45px;-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;">
+                        <img alt="" src="login_images/ums_logo.png" />
+                        <hr style="border: solid 1px #ACACAC" />
+                        <p style="margin-left: 10px">
+                            JavaScript of your browser is not enabled.please enable it first to access UMS
+                        </p>
+                        <p style="margin-left: 10px">
+                            How to enable Javascript : visit this link to step by step help
+                        </p>
+                        <p style="margin-left: 10px">
+                            <a href="http://activatejavascript.org/en/instructions" style="background-color: #337ab7;border-bottom-color: #2e6da4;border-left-color: #2e6da4;border-right-color: #2e6da4;border-top-color: #2e6da4;color: #fff;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding: 5px 10px;text-decoration: none">
+                                Click Here
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </noscript>
+            <link href="css/ums_style_2014.css" rel="stylesheet" type="text/css" />
+            <script src="js/jquery-1.9.1.min.js" type="text/javascript">
+</script>
+        <script src="js/jquery.countdown.min.js" type="text/javascript">
+        </script>
+        <link href="js1/sweetalert.css" rel="stylesheet" />
+        <script src="js1/sweetalert.min.js">
+        </script>
+        <script type="text/javascript">
+            function DisplayAlert(xmsg) {
+
+                swal(
+                    {
+                        title: 'UMS',
+                        text: xmsg
+                    }
+
+
+                );
+        }
+        </script>
+        <style type="text/css">
+            #trStartWith select option {
+                font-size: 14px;
+            }
+
+            .countdown {
+                background: rgba(224, 74, 49, 0.70);
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                float: right;
+                margin-right: 15px;
+                padding: 5px;
+                position: absolute;
+                right: 0;
+                top: 10px;
+                width: 320px;
+            }
+
+            .countdown strong {
+                position: absolute;
+                top: 20px;
+                width: 143px;
+                right: 10px;
+            }
+
+            .countdown b {
+                font-size: 25px;
+            }
+
+            .clock_countdown {
+                color: #fff;
+                font-size: 15px;
+                font-family: "segoe_uilight";
+            }
+
+            .clock {
+                margin: 0 auto;
+                width: 60%;
+                display: block;
+                background-color: #fff;
+                color: #000;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+            }
+        </style>
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-67701680-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <link
+            href="/LpuUms/WebResource.axd?d=hcXDZhXiidgsQUtEo5iT30fH_dTYDJUgFegb7-OjNfbaQmVWpu3cDkxUMKjwNiV26XKE3ffGhHaDWe8_gl82smMyhxAn_O3W9R8ngAK4TWN8JwnOGFVpG-GuPuE707yFoErQccaLd8iNQTYtTb09Ca2vudHGD-czGQaFG1p9q4k1&amp;t=637887782476268860"
+            rel="stylesheet" type="text/css" />
+        </head>
+
+        <body>
+            <form action="./LoginNew.aspx" id="form1" method="post">
+                <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden"
+                    value="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" />
+                <script
+                    src="/LpuUms/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmZx_1_fm7JieTmbHikZ_IID5YFFXXx4Y5TVWWxnZYePVG01HMyeQrv_eqkyIve_3CJITJGGiJcwwpXUzVpAHH9lZ0cCcmnAdKXPGGv1oGewqtMg14J95AhAczUQ9fESt1coiswLTzmG-pWLLunnpVg1&amp;t=ffffffffecf19baa"
+                    type="text/javascript">
+                    </script>
+                <script src="/LpuUms/ScriptResource.axd?d=eE
