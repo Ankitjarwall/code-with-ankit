@@ -1,0 +1,145 @@
+.fir{
+    position:absolute;
+    background-image: url("./images/blob-scene-haikei.png");
+    background-repeat:round;
+    width:100%;
+   min-height:500px;
+    left:0px;
+ background-size:cover;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows:1fr 1fr;
+
+}
+.donate_img{
+  
+  justify-self:center;
+  align-self: center;
+  width:70%;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.containerx{
+  justify-self:center;
+  align-self: center;
+  grid-column: 2/3;
+  grid-row: 1/3;
+ 
+}
+
+.a{
+  background-color:#0f7ee6;
+  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  font-weight: bold;
+  border-color: #0f7ee6;
+}
+.text{
+  color:#0f7ee6;
+  font-family:"Bauhaus 93";
+}
+.a:hover{
+  transform: translateY(5px);
+  color: white;
+}
+
+.two{
+  position:absolute;
+  background-image: url("./images/wave-haikei.png");
+  background-repeat:round;
+  width:100%;
+  top:510px;
+ height:400px;
+  left:0px;
+background-size:cover;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows:auto 1fr 1fr;
+align-items:center ;
+justify-items: center;
+}
+.two_0{
+  grid-row:1/2;
+  grid-column: 1/4;
+}
+
+.two_1{
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+}
+.img_two{
+  width:50%;
+  height:50%;
+
+}
+
+
+.two_2{
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+}
+
+.two_3{
+  grid-column: 3/4;
+  grid-row: 2/3;
+
+}
+.two_4{
+  grid-column: 1/2;
+  grid-row: 3/4;
+
+}
+.two_5{
+  grid-column: 2/3;
+  grid-row: 3/4;
+
+}
+
+.sec{
+  position:absolute;
+  background-image: url("./images/wave-haikei.png");
+  background-repeat:round;
+  width:100%;
+  top:910px;
+ height:500px;
+  left:0px;
+background-size:cover;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows:2fr 1fr;
+
+}
+.sec_1{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self:center;
+  align-self: center;
+}
+.que{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+.ans{
+  font-family: sans-serif;
+  max-width: 300px;
+  text-align: center;
+}
+.sec_2{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self:center;
+  align-self: center;
+}
+.sec_3{
+  grid-column: 1/3;
+  grid-row: 2/3;
+ 
+    justify-self:center;
+    align-self: center;
+  
+}

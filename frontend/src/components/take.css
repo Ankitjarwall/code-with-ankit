@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+.link{
+    color: black;
+}
+.hh1{
+    text-align: center;
+    font-variant: small-caps;
+    background-color: deepskyblue;
+    margin:0;
+    padding:15px 0 15px 0;
+}
+
+#box00{
+    width: 60vw; 
+    padding: 1.4rem; 
+    color: rgb(7, 20, 93); 
+    border:#ffffcc 2px;
+    margin-inline: auto;
+    margin-top: 5rem;
+    background-image: url(images/blob-scene-haikei.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+#box1{ 
+    width: 40vw; 
+    padding: 1rem; 
+    color: rgb(7, 20, 93); 
+    border:#ffffcc 2px;
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+#box2{
+    
+    width: 40vw; 
+    padding: 1rem; 
+    color: rgb(7, 20, 93); 
+    border:#ffffcc 2px;
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+#box3{
+     
+    width: 40vw; 
+    padding: 1rem; 
+    color: rgb(7, 20, 93); 
+    border:#ffffcc 2px;
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+#box4{
+     
+    width: 40vw; 
+    padding: 1rem; 
+    color: rgb(7, 20, 93); 
+    border:#ffffcc 2px;
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+#box00{
+    box-shadow: 3px 3px 3px black;
+}
+.container-fluid0 {
+    padding:1rem;
+    background-color: #fafafb;
+    box-shadow: 1px 4px 8px rgba(0,0,0,.15);
+    transition: all .3s ease-in-out;
+}
+#box4:hover{
+    background-color: skyblue;
+}
+#box3:hover{
+    background-color: skyblue;
+}
+#box2:hover{
+    background-color:skyblue;
+}
+#box1:hover{
+    background-color: skyblue;
+}
+
+.container-fluid0 {
+    padding:1rem;
+    background-color: #fafafb;
+    box-shadow: 1px 4px 8px rgba(0,0,0,.15);
+    transition: all .3s ease-in-out;
+}
+.container-fluid2 {
+    padding:1rem;
+    background-color: #fafafb;
+    box-shadow: 1px 4px 8px rgba(0,0,0,.15);
+    transition: all .3s ease-in-out;
+}
+.container-fluid3 {
+    padding:1rem;
+    background-color: #fafafb;
+    box-shadow: 1px 4px 8px rgba(0,0,0,.15);
+    transition: all .3s ease-in-out;
+}
+.container-fluid4 {
+    padding:1rem;
+    background-color: #fafafb;
+    box-shadow: 1px 4px 8px rgba(0,0,0,.15);
+    transition: all .3s ease-in-out;
+}
+.takeH{
+    text-decoration: wavy;
+    font-family: 'Square Peg', 'Cursive' ;
+    font-weight: 900;
+    font-size: 55px;
+    color: black;
+}
+
+
+@media(max-width:620px){
+   #box{ 
+        width: 70vw;  
+        padding: .5rem;
+        margin-inline: auto;
+        margin-top: 5rem;
+    } 
+}
+

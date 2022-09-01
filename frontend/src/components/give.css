@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+.link{
+    color: black;
+}
+
+  .first{
+    position: absolute;
+    left:0px;
+    width:100%;
+    background: url("./images/blob-scene-haikei.png");
+    height:600px;
+    background-repeat:round;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .heading{
+      color:rgb(51, 119, 245);
+      font-family: 'Akaya Telivigala', cursive;
+      font-weight: bolder;
+     
+  }
+  
+  .second{
+  position:absolute;
+  left:0px;
+  top:610px;
+   width:100%;
+   height: 500px;
+   
+   background: url("./images/blob-scene-haikei.png");
+  background-repeat:round;
+  background-size: cover;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    
+  }
+  .img_1{
+   
+    justify-self:center;
+    align-self: center;
+  }
+  .container1{
+    justify-self:center;
+  align-self: center;
+  
+  }
+  
+  .container1 h1{
+    color:rgb(51, 119, 245);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 70px;
+  }
+  .para{
+      color: rgb(51, 119, 245);
+      font-family: 'Times New Roman', Times, serif;
+      max-width: 300px;
+  }
+  .third{
+    position:absolute;
+  left:0px;
+  top:1110px;
+   width:100%;
+   height: 500px;
+   background: url("./images/blob-scene-haikei.png");
+  background-repeat:round;
+  background-size: cover;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    
+  }
+ 
+  .fourth{
+    
+      position:absolute;
+    left:0px;
+    top:1610px;
+     width:100%;
+     height: 500px;
+     background: url("./images/blob-scene-haikei.png");
+  background-repeat:round;
+  background-size: cover;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    }
+   
+    .fifth{
+      position:absolute;
+    left:0px;
+    top:2110px;
+     width:100%;
+     height: 500px;
+     background: url("./images/blob-scene-haikei.png");
+     background-repeat:round;
+     background-size: cover;
+       display:grid;
+       grid-template-columns: 1fr 2fr;
+    }
+   
+    .sixth{
+      position:absolute;
+    left:0px;
+    top:2610px;
+     width:100%;
+     height: 500px;
+     background: url("./images/blob-scene-haikei.png");
+     background-repeat:round;
+     background-size: cover;
+       display:grid;
+       grid-template-columns: 1fr 2fr;
+    }
+    @media(max-width:950px) {
+     .img_1{
+       max-width: 100%;
+     }
+    }
+    

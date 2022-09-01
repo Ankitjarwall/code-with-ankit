@@ -3,31 +3,40 @@ using namespace std;
 
 int main()
 {
-    int array[10] = {9,6,5,8,7,3,4,1,2,10}, temp = 0;
+    int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, even[5] = {0}, odd[5] = {0}, temp = 0, j = 0, k = 0;
 
-    cout << "before array : ";
+    cout << "Array before : ";
     for (int i = 0; i < 10; i++)
     {
         cout << array[i] << " ";
     }
 
-    for (int j = 0; j < 10; j++)
+    for (int i = 0; i < 10; i++)
     {
-        for (int i = 0; i < 10; i++)
+
+        if (array[i] % 2 == 0)
         {
-            if (array[i] > array[i + 1])
-            {
-                temp = array[i];
-                array[i] = array[i + 1];
-                array[i + 1] = temp;
-            }
+            even[j] = array[i];
+            j++;
+        }
+        if (array[i] % 2 != 0)
+        {
+            odd[k] = array[i];
+            k++;
         }
     }
 
-    cout << "\nafter array : ";
-    for (int i = 0; i < 10; i++)
+    cout << "\nEven Array after : ";
+
+    for (int i = 0; i < 5; i++)
     {
-        cout << array[i] << " ";
+        cout << even[i] << " ";
+    }
+
+    cout << "\nOdd Array after : ";
+    for (int i = 0; i < 5; i++)
+    {
+        cout << odd[i] << " ";
     }
 
     return 0;

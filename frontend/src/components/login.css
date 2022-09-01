@@ -1,0 +1,8 @@
+.gradient-custom{
+  background-image: url("./images/wave-haikei.png");
+  background-repeat: round;
+  background-size: cover;
+}
+.login-card{
+  background-color: rgb(97, 150, 247);
+}

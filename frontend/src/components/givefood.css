@@ -1,0 +1,35 @@
+#box{
+    background-color: #cccc ; 
+    width: 60vw; 
+    padding: 1.4rem; 
+    color: rgb(7, 20, 93); 
+    border:#ffffcc 2px;
+    margin-inline: auto;
+    margin-top: 5rem;
+}
+
+/* .container-fluid {
+    padding:1rem;
+    background-color: #fafafb;
+    box-shadow: 1px 4px 8px rgba(0,0,0,.15);
+    transition: all .3s ease-in-out;
+} */
+.content-box .form-group {
+    padding:1rem;
+    background-color: #fafafb;
+    box-shadow: 1px 4px 8px rgba(0,0,0,.15);
+    transition: all .3s ease-in-out;
+}
+.container-fluid{
+    background-image: url(images/blob-scene-haikei.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media(max-width:636px){
+   #box{ 
+        width: 85vw;  
+        padding: .5rem;
+        margin-inline: auto;
+        margin-top: 5rem;
+    } 
+}

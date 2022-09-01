@@ -1,0 +1,19 @@
+h1{
+    color: white;
+}
+body{
+    background-color: rgba(242, 160, 160, 0.881);
+} 
+#red{
+    color: black;
+    background-color: greenyellow;
+}
+span.yellow{
+    background-color: black;
+}
+span.red{
+    background-color:black;
+}
+span.geerr{
+    background-color: black;
+}
