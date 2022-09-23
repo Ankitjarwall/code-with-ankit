@@ -1,0 +1,29 @@
+a {
+    font-size: 2em;
+
+}
+
+/* order : link,:visited,hover,acive
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: darkblue;
+} */
+
+a:link,a:visited{
+    background-color: green;
+    display: inline;
+    padding: 10px;
+    color: white;
+}

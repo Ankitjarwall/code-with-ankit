@@ -1,0 +1,1 @@
+document.querySelector('#dark').addEventListener('click', () => { document.body.style.backgroundColor = 'black' })

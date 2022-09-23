@@ -1,26 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Html Practice</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 2px solid black;
+        }
+
+        form {
+            border: 5px solid black;
+            border-radius: 10%;
+            width: 400px;
+        }
+
+        #button {
+            background-color: greenyellow;
+            width: 150px;
+            height: 40px;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
-    <h3>Write a HTML program to generate Following output :</h3>
-    <table border="90">
-        <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <ol>
-                <li>Black Tea</li>
-                <li>Green Tea</li>
-            </ol>
-            <li>Milk</li>
-        </ul>
-    </table>
+    <h1>Web development Form</h1>
+    <form>
+        <p>Name : <input type="name" placeholder="Enter your name here"></p>
+        <p>Email : <input type="Email" placeholder="Enter your Email here"></p>
+        <p>Password : <input type="password" placeholder="Enter your Password here"></p>
+        <p>Zip code : <input type="number" placeholder="Enter the zip code here"></p>
+        <p>Name : <input type="name" placeholder="Enter your name here"></p>
+        <p>Email : <input type="Email" placeholder="Enter your Email here"></p>
+        <p>Password : <input type="password" placeholder="Enter your Password here"></p>
+        <p>Zip code : <input type="number" placeholder="Enter the zip code here"></p>
+        <p><input id="button" type="submit" height="15px"></p>
+    </form>
 </body>
 
 </html>

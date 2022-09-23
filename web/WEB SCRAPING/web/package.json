@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "save": "^2.5.0",
+    "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.4.0"
+  },
+  "name": "web",
+  "version": "1.0.0",
+  "main": "javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

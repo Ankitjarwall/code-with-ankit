@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;    
+}
+body{
+    margin: 2em;
+    background: url("images.png") no-repeat fixed;
+    background-size: cover;
+    /* background:fixed; */
+}
+
+.navigation {
+    color: white;
+    margin: auto;   
+    width: 80%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.logo,
+.orange {
+    color: #ff7200;
+}
+
+#btn-search{
+    margin-left: -3em;
+    height: 2em;
+    border:0.2em solid#ff7200;
+    border-radius:0.4em;
+    border-top-right-radius: 0em;
+    border-bottom-right-radius: 0em;
+}
+.input-field>label{
+    background-color: #ff7200;
+    border-radius: 0.3em;
+    border-bottom-left-radius: 0em;
+    border-top-left-radius: 0em;
+    border: 0.28em solid #ff7200;
+}
+
+.content-body {
+    color: white;
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content {
+    margin-top: 20em;
+}
+
+.content>p {
+    margin-top: 0.7em;
+}
+
+.content>a {
+    text-decoration: none;
+    background-color: #ff7200;
+    color: black;
+    border-radius: 15%;
+}
+
+.login {
+    display: grid;
+    grid-template-columns: 1fr 60% ;
+    margin-top: 15em;
+}
+
+.main-login {
+    border: 2px solid black;
+    border-radius: 0.6em;
+    background-color: black;
+    color: aliceblue;
+    padding: 4%;
+}
+
+.heading-login {
+    margin: auto;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    width: 80%;
+    border-radius: 0.3em;
+    font-size: 310%;
+    padding: 2%;
+}
+
+.details {
+    margin-top: 1.8em;
+    margin-left: 2em;
+    margin-bottom: 1.5em;
+}
+
+#email,
+#password {
+    margin-top: 3%;
+    width: 90%;
+    height: 3em;
+    border-radius: 0.5em;
+}
+
+#btn-login {
+    display: flex;
+    margin: auto;
+    width: 85%;
+    height: 3em;
+    justify-content: center;
+    padding-top: 3%;
+    border-radius: 0.6em;
+}
+
+.main-new-account {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: auto;
+    width: 85%;
+}
+
+.new-account,
+.new-account1,
+.new-account2 {
+    display: flex;
+    margin: auto;
+    padding: 1%;
+}
+
+.footer {
+    display: grid;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+/* .images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;    
+    border: 3px solid white;
+}
+ .images1{
+    display: flex;
+    margin: auto;
+    width: 1em;
+    height: 1em;
+}  */
+
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top:8.9em ;
+    color: white;
+}

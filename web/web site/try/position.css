@@ -1,0 +1,40 @@
+.parent {
+    background-color: skyblue;
+    position: relative;
+    height: 200vh;
+}
+
+.child-one {
+    position: fixed;
+    top: 0;
+    /* float: left; */
+    padding: 20px;
+    list-style-type: none;
+}
+
+.child-one {
+    background-color: red;
+    left: 5em;
+}
+
+.child-two {
+    background-color: green;
+    position: fixed;
+    top: 0;
+    left: 10em;
+    /* float: left; */
+    padding: 20px;
+    list-style-type: none;
+}
+
+.child-three {
+
+    background-color: pink;
+    position: fixed;
+    top: 0;
+    left: 15em;
+    /* float: left; */
+    padding: 20px;
+    list-style-type: none;
+
+}

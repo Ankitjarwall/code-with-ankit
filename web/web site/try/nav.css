@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-header{
+    background:linear-gradient(orange,white,green);
+    border: 2px solid green;
+    text-align: center;
+    margin-top: 10px;
+    width: 1600px;
+    height: 5em;
+    margin-left: 4em;
+}
+.home{
+float: left;
+margin-left: 35px;
+
+}
+.discover{
+    float: left;
+    margin-left: 35px;
+}
+.search{
+
+}
+.profile{
+float: right;
+margin-right: 35px;
+}
+.home ,.discover ,.profile ,.search{
+    /* position: fixed; */
+    color: black;
+    margin-top: 2em;
+}
+
+.home:hover{
+    border: 2px solid green;
+    border-radius: 2em;
+    padding: 5px;
+    background-color: rgba(206, 112, 112, 0.566);
+}
+
+body{
+    background-color: green;
+}

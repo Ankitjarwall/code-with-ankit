@@ -1,0 +1,33 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.pink ,.black,.red,.yellow,.green{
+    width: 105px;
+    height: 35px;
+    float: left;
+    margin-top: 15%;
+}
+.main-div{
+    border: 2px solid black;
+    height: 800px;
+    width: 650px;
+    margin-left: 30%;
+    background-color: rgb(111, 109, 106);
+}
+.pink{
+    margin-left: 60px;
+    background-color: pink;
+}
+.black{
+    background-color: black;
+}
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}

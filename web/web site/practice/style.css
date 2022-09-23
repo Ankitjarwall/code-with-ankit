@@ -1,0 +1,24 @@
+div {
+    width: 30em;
+    height: 15em;
+    border-radius: 3em;
+    border: 1em solid rgba(255, 255, 255, 0.59);
+    background-color: rgba(212, 218, 224, 0.331);
+    text-align: center;
+    color: aliceblue;
+    font-size: large;
+    margin: 0 auto;
+    margin-top: 15em;
+}
+
+button {
+    background-color: rgba(233, 68, 8, 0.504);
+    border-radius: 2em;
+    margin-top: 1em;
+}
+
+body {
+    background-color: rgb(216, 162, 162);
+    background: url(/gym.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
