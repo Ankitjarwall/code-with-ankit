@@ -27,5 +27,6 @@ int main()
     int element = 99, position = 3, array_size = 6;
 
     insert(array, element, position, array_size);
+    printf("stop");
     return 0;
 }
