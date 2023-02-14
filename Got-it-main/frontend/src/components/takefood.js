@@ -27,7 +27,7 @@ function Takefood() {
             }
 
             try {
-                const { data } = await axios.get("https://got-it-in.herokuapp.com/take/food", config);
+                const { data } = await axios.get("http://18.237.33.67:5500/take/food", config);
                 console.log(data);
                 setFoods(data);
 

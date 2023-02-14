@@ -1,0 +1,91 @@
+{
+  "id": "da75fb8a-052f-495a-aa16-3a16ac83e5e4",
+  "version": "2.0",
+  "name": "ums",
+  "url": "https://ums.lpu.in",
+  "tests": [{
+    "id": "992ddffe-c074-486b-80ec-e12467ebd251",
+    "name": "",
+    "commands": [{
+      "id": "53b4f771-bf20-4be1-96d4-e959a93988c7",
+      "comment": "",
+      "command": "open",
+      "target": "/lpuums/LoginNew.aspx",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "025e20f1-4527-421b-b7dd-b6450178ecd0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1576x625",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae314e6b-cfdb-4038-8c5a-1ef8edca3abc",
+      "comment": "",
+      "command": "click",
+      "target": "id=txtU",
+      "targets": [
+        ["id=txtU", "id"],
+        ["name=txtU", "name"],
+        ["css=#txtU", "css:finder"],
+        ["xpath=//input[@id='txtU']", "xpath:attributes"],
+        ["xpath=//div[@id='UpdatePanel1']/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a4585fa-8759-4314-bec6-798ebe911793",
+      "comment": "",
+      "command": "type",
+      "target": "id=txtU",
+      "targets": [
+        ["id=txtU", "id"],
+        ["name=txtU", "name"],
+        ["css=#txtU", "css:finder"],
+        ["xpath=//input[@id='txtU']", "xpath:attributes"],
+        ["xpath=//div[@id='UpdatePanel1']/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "12103196"
+    }, {
+      "id": "7b14b992-3fab-409c-8524-387cd5d2c7d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=TxtpwdAutoId_8767",
+      "targets": [
+        ["id=TxtpwdAutoId_8767", "id"],
+        ["name=TxtpwdAutoId_8767", "name"],
+        ["css=#TxtpwdAutoId_8767", "css:finder"],
+        ["xpath=//input[@id='TxtpwdAutoId_8767']", "xpath:attributes"],
+        ["xpath=//div[@id='UpdatePanel1']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "Meena@9549"
+    }, {
+      "id": "e66b1791-97ac-4c3d-bb05-ab86731467a9",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=TxtpwdAutoId_8767",
+      "targets": [
+        ["id=TxtpwdAutoId_8767", "id"],
+        ["name=TxtpwdAutoId_8767", "name"],
+        ["css=#TxtpwdAutoId_8767", "css:finder"],
+        ["xpath=//input[@id='TxtpwdAutoId_8767']", "xpath:attributes"],
+        ["xpath=//div[@id='UpdatePanel1']/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }],
+  "suites": [{
+    "id": "7b57a9b2-c662-4f21-a480-c37a68e9f997",
+    "name": "",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["992ddffe-c074-486b-80ec-e12467ebd251"]
+  }],
+  "urls": ["https://ums.lpu.in/"],
+  "plugins": []
+}

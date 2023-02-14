@@ -1,0 +1,9 @@
+.foodcard-top {
+    margin-top: 1%;
+}
+#food-title{
+    margin-left: 0%;
+    /* border: 2px solid black; */
+    font-weight: bold;
+    font-size:x-large;
+}

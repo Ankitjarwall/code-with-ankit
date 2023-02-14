@@ -38,7 +38,7 @@ const Register = () => {
       return alert("Please fill out the form ")
     }
 
-    axios.post('https://got-it-in.herokuapp.com/auth/register', data).then(res => {
+    axios.post('http://18.237.33.67:5500/auth/register', data).then(res => {
       if (res.status == 201) {
         console.log(res.data["message"]);
         alert(res.data["message"]);

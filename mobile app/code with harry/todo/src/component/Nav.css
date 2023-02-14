@@ -1,0 +1,20 @@
+.navigation-bar {
+    background-color: rgb(200, 239, 200);
+    width: 50rem;
+    list-style: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    height: 4rem;
+    margin-top: 10px;
+    border-color: rgb(200, 239, 200);
+}
+
+.nav-outer {
+    margin-left: 25%;
+}
+
+.btn-nav{
+    margin-top: 22px;
+    margin-left: 5rem;
+}

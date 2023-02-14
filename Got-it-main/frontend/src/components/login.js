@@ -24,7 +24,7 @@ function Login() {
     }
 
 
-    axios.post('https://got-it-in.herokuapp.com/auth/login', data).then(res => {
+    axios.post('http://18.237.33.67:5500/auth/login', data).then(res => {
       if (res.status === 201) {
 
         alert(res.data["message"]);

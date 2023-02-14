@@ -27,7 +27,7 @@ function Taketoy() {
             }
 
             try {
-                const { data } = await axios.get("https://got-it-in.herokuapp.com/take/play", config);
+                const { data } = await axios.get("http://18.237.33.67:5500/take/play", config);
                 console.log(data);
                 setToys(data);
 

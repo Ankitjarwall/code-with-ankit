@@ -39,7 +39,7 @@ function Givemed() {
         data.append("expiry", expiry);
         data.append("image", file);
 
-        axios.post('https://got-it-in.herokuapp.com/give/heal', data, config)
+        axios.post('http://18.237.33.67:5500/give/heal', data, config)
             .then(() => {
                 alert("successfully donated")
             }).catch(err => {

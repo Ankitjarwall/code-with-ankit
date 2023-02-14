@@ -1,0 +1,3623 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Dashboard/font/iconsmind-s/css/iconsminds.css" />
+    <link rel="stylesheet" href="Dashboard/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Dashboard/css/bootstrap.rtl.only.min.css" />
+    <link rel="stylesheet" href="Dashboard/css/main.css" />
+    <link href="Dashboard/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="Dashboard/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="js1/sweetalert.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Dashboard/css/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="Dashboard/css/circle.css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <style type="text/css">
+        .uploadbtn {
+            width: 70px;
+        }
+
+        #DT .owl-dots {
+            position: absolute;
+            top: -10px;
+            right: 0;
+        }
+
+        .fa-whatsapp {
+            color: #fff;
+            background: linear-gradient(#25d366, #25d366) 14% 84%/16% 16% no-repeat, radial-gradient(#25d366 60%, transparent 0);
+        }
+
+        .himg {
+            height: 290px;
+            background-size: cover;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .himg .happ-ttile {
+            width: 100%;
+        }
+
+        .himg iframe {
+            width: 100%;
+        }
+
+        /*
+         .owl-carousel .owl-item .himg img {
+            display: block;
+            width: auto !important;
+            height: 300px;
+            margin: 0 auto;
+        }*/
+        .home-promo.promo-light {
+            /* background: #fff !important;
+            box-shadow: 0 0 20px #ccc !important;*/
+        }
+
+        .authorities-contact {
+            display: block;
+            margin-bottom: 5px
+        }
+
+        .border-primary {
+            border-color: #007bff !important
+        }
+
+        .TodayDriveEventsScroll {
+            height: 175px;
+        }
+
+        .TodayEvents {
+            height: 300px;
+        }
+
+        .TodayDriveEvents {
+            height: 205px;
+        }
+
+        .splbtn {
+            background: #FFF;
+            border-radius: 15px;
+            padding: 0px 10px;
+            border: 1px solid #F68121;
+            margin-left: 4px;
+            width: 86px;
+            float: right;
+            white-space: nowrap;
+        }
+
+        .border-secondary {
+            border-color: #6c757d !important
+        }
+
+        .border-success {
+            border-color: #28a745 !important
+        }
+
+        .event-tt {
+            font-size: 20px;
+        }
+
+
+        .border {
+            border: 3px solid #fff !important;
+            background-color: #F8F8F8 !important;
+        }
+
+        .table-bordered th,
+        .table-bordered td {
+            border: 1px solid #145388 !important;
+        }
+
+
+        .right-arrow::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: 2px solid #145388;
+            border-radius: 14px;
+            display: inline-block;
+            position: absolute;
+            top: 5px;
+            left: -15px;
+        }
+
+        /* .happ-image, .owl-stage-outer {
+            position: relative;
+            height: 220px;
+        }
+        .happ-image2, .owl-stage-outer {
+            position: relative;
+            height: 310px;
+        }*/
+
+        #LPUNews .owl-stage-outer,
+        #heads .owl-stage-outer {
+            position: relative;
+            height: auto !important;
+        }
+
+        #PlacedStudentsList .owl-stage-outer,
+        #heads .owl-stage-outer {
+            position: relative;
+            height: auto !important;
+        }
+
+        .h20 {
+            height: 40px;
+        }
+
+        #heads .card {
+            background: #fff;
+            border-radius: 5px !important;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+            margin: 10px;
+        }
+
+        #heads .owl-item img {
+            width: auto !important;
+            margin: 15px auto;
+        }
+
+        #heads .owl-nav i {
+            background: #ddd;
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            border-radius: 3px;
+            padding: 10px;
+            font-size: 22px;
+        }
+
+        #heads .owl-nav i:hover {
+            background: #ccc;
+        }
+
+        #heads .owl-nav i:before {
+            margin: 0 !important
+        }
+
+        #heads .owl-nav .owl-prev {
+            position: absolute;
+            top: 40%;
+            left: -28px;
+        }
+
+        #heads .owl-nav .owl-next {
+            position: absolute;
+            top: 40%;
+            right: -28px;
+        }
+
+
+        .news-date {
+            color: #1779ba;
+            font-size: 18px;
+        }
+
+        .happ-ttile {
+            position: absolute;
+            background: #ffffff;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(255, 255, 255, .01), rgba(0, 0, 0, .7), rgba(0, 0, 0, 1));
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(255, 255, 255, .01), rgba(0, 0, 0, .7), rgba(0, 0, 0, 1));
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(255, 255, 255, .01), rgba(0, 0, 0, .7), rgba(0, 0, 0, 1));
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=0);
+            /* IE6-9 */
+            bottom: 0px;
+            z-index: 9;
+            font-size: 14px;
+            font-weight: 600;
+            color: #FFF;
+            /*! height: 58px; */
+            padding: 15px;
+            width: 95%;
+        }
+
+        /*.odd{
+            background-color: rgba(0,0,0,.05);
+        }*/
+        #exampleModalRight .modal-body {
+            padding: 0 !important;
+        }
+
+        #exampleModalRight .modal-body.scroll {
+            height: 82vh;
+            width: 97%;
+        }
+
+        .message-list div.d-flex {
+            padding: 20px;
+        }
+
+        .TodayTimetable,
+        #PendingAssignments {
+            width: 100%;
+        }
+
+        .message-list div.d-flex:nth-of-type(2n+1) {
+            background-color: rgba(0, 0, 0, .05);
+        }
+
+        .list-thumbnail {
+            border-radius: .1rem;
+            padding: 0;
+            border: initial;
+            height: auto;
+            max-width: 85px;
+            height: 85px;
+            object-fit: cover;
+            width: unset;
+        }
+
+        .mr {
+            margin-right: 0px;
+        }
+
+        .announcement-subject {
+            font-weight: 800;
+            font-size: 15px;
+        }
+
+        .happtitle {
+            font-size: 13px !important;
+            font-weight: bold !important;
+            padding-top: 10px !important;
+        }
+
+        .misc-btn {
+            position: absolute;
+            right: -80px;
+            top: -20px;
+        }
+
+        .pa0 {
+            padding: 0 !important;
+        }
+
+        .misc-smfont {
+            font-size: 12px;
+        }
+
+        .misc-height {
+            height: 300px;
+            font-size: 12px;
+        }
+
+        .upcomming-events-widget {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /*.upcomming-events-widget .event-desc {
+                width: calc(100% - 40px);
+                padding-left: 15px;
+            }*/
+
+        .upcomming-events-widget .event-desc h4.event-title {
+            font-weight: 400;
+            /*  font-size: 11px;*/
+            /* line-height: 22px;*/
+        }
+
+        .owl-theme .owl-controls {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        Styling Next and Prev buttons .owl-theme .owl-controls .owl-buttons div {
+            color: #FFF;
+            display: inline-block;
+            zoom: 1;
+            *display: inline;
+            IE7 life-saver margin: 5px;
+            padding: 3px 10px;
+            font-size: 12px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+            background: #869791;
+            filter: Alpha(Opacity=50);
+            IE7 fix opacity: 0.5;
+        }
+
+        .accordion .panel .panel-title .accordion-toggle {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 22px;
+            padding-bottom: 2px;
+        }
+
+
+        .accordion .panel .panel-title .accordion-toggle span.announcement-subject {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 75%;
+            text-overflow: ellipsis;
+            display: inline-block;
+            vertical-align: sub;
+            font-weight: 500;
+        }
+
+        .accordion .panel .panel-title .accordion-toggle span.announcement-date {
+            font-style: italic;
+            font-size: smaller;
+            float: right;
+            display: inline-block;
+        }
+
+        #announcements-accordion .panel-body {
+            padding-top: 5px;
+            color: #2b2b2b;
+            font-weight: 500;
+        }
+
+        .event-title {
+            /* color: #1779ba;font-size: 18px;
+*/
+            font-size: 20px;
+            color: #333;
+        }
+
+        .gc-card {
+            flex: 1;
+        }
+
+        .gc-card .card {
+            height: 100%;
+        }
+
+        .gc-card .card iframe {
+            height: 360px;
+            width: 100%;
+        }
+
+        .gc-card .card img {
+            min-height: 360px;
+            object-fit: fill;
+
+        }
+
+        @media(max-width:1440px) {
+            .himg {
+                height: 250px;
+            }
+
+            .gc-card .card iframe {
+                height: 300px;
+            }
+
+            .gc-card .card img {
+                min-height: 300px;
+            }
+        }
+
+        @media(max-width:1200px) {
+            .himg {
+                height: 200px;
+            }
+
+            .gc-card .card img {
+                min-height: 250px;
+            }
+
+            .gc-card .card iframe {
+                height: 250px;
+            }
+        }
+
+        @media(max-width:1100px) {
+            .himg {
+                height: 130px;
+            }
+
+            .gc-card .card img {
+                min-height: 180px;
+            }
+
+            .gc-card .card iframe {
+                height: 180px;
+            }
+
+            @media(max-width:770px) {
+                .himg {
+                    height: 100%;
+                }
+
+                .gc-card .card img {
+                    min-height: 100%;
+                }
+
+                .gc-card .card iframe {
+                    height: 254px;
+                }
+
+                .gc-card {
+                    margin-bottom: 40px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .gc-card .card iframe {
+                    height: 236px;
+                }
+            }
+
+            @media (max-width: 440px) {
+                .gc-card .card iframe {
+                    height: 160px;
+                }
+            }
+
+            @media (max-width: 400px) {
+                .gc-card .card iframe {
+                    height: 150px;
+                }
+            }
+
+            @media (max-width: 380px) {
+                .gc-card .card iframe {
+                    height: 143px;
+                }
+            }
+
+            @media(max-width:767px) {
+
+                #heads .owl-nav .owl-prev {
+                    left: -5px;
+                }
+
+                #heads .owl-nav .owl-next {
+                    right: -5px;
+                }
+            }
+
+            @media(max-width:420px) {
+
+                #cgpa b,
+                #AttPercent b {
+                    color: #1779ba;
+                    font-size: 12px;
+                    display: block;
+                }
+
+                .news-date {
+                    font-size: 15px;
+                }
+
+                .event-tt {
+                    font-size: 17px;
+                }
+
+                #heads .owl-nav .owl-prev {
+                    left: -5px;
+                }
+
+                #heads .owl-nav .owl-next {
+                    right: -5px;
+                }
+            }
+    </style>
+    <script type="text/javascript">
+
+
+
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-67701680-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <style type="text/css">
+        .main-menu {
+            position: relative
+        }
+
+        #idopt {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            column-count: 3;
+        }
+
+        .dropdbmenu {
+            display: none;
+            width: 100%;
+            height: 450px;
+            padding-bottom: 25px;
+        }
+
+        .dropsmenu {
+            display: inline-block;
+            width: 100%;
+            height: 450px;
+            padding-bottom: 25px;
+        }
+
+        .main-menu .menu-button {
+            position: absolute;
+            right: -28px;
+            background: #f1f1f1;
+            display: inline-block !important;
+            padding: 8px 8px 8px 6px;
+            font-size: 18px;
+            border: 1px solid #aaa;
+            border-left-color: rgb(170, 170, 170);
+            border-left-style: solid;
+            border-left-width: 1px;
+            border-radius: 0 6px 6px 0;
+            border-left: 0;
+        }
+
+        .navbar .nav-item .dropdown-menu {
+            width: 100%;
+            border-radius: 0;
+            padding: 20px;
+        }
+
+        .navbar .nav-item .dropdown-menu .masonry-with-columns h3 {
+            margin-bottom: 20px;
+        }
+
+        .navbar .nav-item a.nav-link {
+            display: block;
+            letter-spacing: 1px;
+            color: #6f6f6f;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+        }
+
+        .navbar .nav-item a.nav-link:hover {
+            color: #F68121 !important
+        }
+
+        .navbar-nav .nav-link::after {
+            float: none;
+            margin-left: .255em;
+            position: relative;
+            top: 3px;
+            content: "\f078";
+            border: 0 !important;
+            font-family: FontAwesome;
+        }
+
+        .scroll.dropdown-menu {
+            border-top: #F68121 2px solid;
+        }
+
+        .menu-content {
+            border-right: 1px solid #ddd;
+        }
+
+        .menu-content h3 {
+            background: 2ddd;
+            margin-bottom: 15px !important;
+            padding: 5px;
+            color: #999;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        ul.mega-menu-submenu {
+            padding-left: 20px;
+        }
+
+        .logout-btn,
+        .logout-btn:hover {
+            display: block;
+            padding: 3px 10px;
+            background: #F68121;
+            color: #FFF;
+            border-radius: 15px;
+            margin-top: 5px;
+        }
+
+        .mega-menu-content {
+            column-count: 4;
+        }
+
+
+        #toast-container>div {
+            opacity: 1;
+        }
+
+        .ums-menu .brand {
+            float: left;
+            padding: 15px 0;
+        }
+
+        .ums-menu .brand img {
+            height: 70px;
+            -webkit-transition: height .4s ease, opacity .3s ease;
+            -o-transition: height .4s ease, opacity .3s ease;
+            transition: height .4s ease, opacity .3s ease;
+        }
+
+        .menuclass {
+            position: relative;
+        }
+
+        .menuclass.menu-div h4 {
+            margin: 16px 0 5px 0;
+            border-bottom: 1px solid #f2f2f2;
+            padding: 0 0 7px 0;
+        }
+
+        .menuclass.menu-div h4:before {
+            content: "\e056";
+            font-family: 'Glyphicons Halflings';
+            margin-right: 7px;
+            font-size: 12px;
+            color: #a6a6a6;
+            font-weight: 100;
+        }
+
+        .ums-menu .ums-navigation {
+            transition: height .4s ease, opacity .3s ease;
+        }
+
+        .ums-menu .ums-navigation ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border-right: 1px solid #eee;
+            float: left;
+        }
+
+        .ums-menu .ums-navigation ul li {
+            display: inline-block;
+            position: inherit;
+        }
+
+        .ums-menu .ums-navigation ul li.ums-single-menu {
+            display: inline-block;
+            position: relative;
+        }
+
+        .ums-menu .ums-navigation ul li>a {
+            display: block;
+            line-height: 22px;
+            padding: 39px 15px;
+            color: #ccc;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            -webkit-transition: margin .4s ease, padding .4s ease;
+            -o-transition: margin .4s ease, padding .4s ease;
+            transition: margin .4s ease, padding .4s ease;
+        }
+
+        .ums-menu .ums-navigation ul li a:hover {
+            background: #32c5d2;
+            color: #FFF;
+        }
+
+        .ums-menu .ums-navigation ul li .ums-dropdown-menu {
+            display: none;
+            position: absolute;
+            width: 100%;
+            background-color: #FFF;
+            box-shadow: 0px 13px 42px 11px rgba(0, 0, 0, 0.05);
+            border: 1px solid #EEE;
+            border-top: 2px solid #666;
+            height: auto;
+            z-index: 199;
+            top: auto;
+            left: 0;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .ums-menu .ums-navigation ul li .ums-dropdown-single-menu {
+            display: none;
+            position: absolute;
+            background-color: #FFF;
+            box-shadow: 0px 13px 42px 11px rgba(0, 0, 0, 0.05);
+            border: 1px solid #EEE;
+            border-top: 2px solid #666;
+            height: auto;
+            z-index: 199;
+            top: auto;
+            right: 0;
+            margin: 0;
+            padding: 10px;
+            width: 300px;
+        }
+
+        .ums-navigation ul li .ums-dropdown-single-menu .qdiv {
+            cursor: pointer;
+            padding: 10px 0;
+        }
+
+        .ums-menu .ums-navigation ul li:hover .ums-dropdown-menu,
+        .ums-menu .ums-navigation ul li:hover .ums-dropdown-single-menu {
+            display: block;
+        }
+
+        .ums-menu .ums-navigation ul li .ums-dropdown-menu ul li {
+            display: block;
+        }
+
+        .ums-menu .ums-navigation ul li .ums-dropdown-menu ul li h3 {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase !important;
+            line-height: 1.3 !important;
+        }
+
+        .ums-menu .ums-navigation ul li .ums-dropdown-menu ul li a {
+            font-size: 12px;
+            font-weight: 500;
+            color: #666;
+            padding: 5px !important;
+            border: 0;
+            letter-spacing: 0;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+
+        .ums-menu .ums-navigation ul li .ums-dropdown-single-menu .ums-mega-menu {
+            column-count: 1;
+        }
+
+        .ums-menu .ums-navigation ul li .ums-mega-menu {
+            column-count: 4;
+        }
+
+        .ums-menu .ums-navigation ul li .ums-mega-menu ul {
+            float: none;
+        }
+
+        .ums-menu.ums-fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1030;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            height: 60px;
+            transition: height .4s ease, opacity .3s ease;
+        }
+
+        .ums-menu.ums-fixed-top .brand img {
+            height: 40px;
+        }
+
+        .ums-menu.ums-fixed-top .brand {
+            padding: 10px 0;
+        }
+
+        .ums-menu.ums-fixed-top .ums-navigation ul li>a {
+            padding-top: 19px;
+            padding-bottom: 19px;
+        }
+
+        body.top-search-open .ums-menu .brand,
+        body.top-search-open .ums-menu .ums-nav {
+            opacity: 0;
+        }
+
+        #top-search {
+            -webkit-transition: margin .4s ease, padding .4s ease;
+            -o-transition: margin .4s ease, padding .4s ease;
+            transition: margin .4s ease, padding .4s ease;
+            margin-right: 15px;
+        }
+
+        .ums-menu .ums-navigation #top-search .dropdbmenu {
+            height: 400px;
+            width: 99%;
+            display: none;
+            position: absolute;
+            overflow-y: scroll;
+            background: #FFF;
+            border: 1px solid #ccc;
+            top: 93px;
+            z-index: 99;
+            padding: 15px;
+            left: 10px;
+        }
+
+        .ums-menu .ums-navigation #top-search .dropdbmenu .menuclass.menu-div {
+            clear: both;
+            margin-bottom: 10px;
+            float: left;
+            width: 100%;
+        }
+
+        .ums-menu .ums-navigation #top-search .dropdbmenu .menuclass a {
+            width: 85%;
+            text-align: left;
+            float: left;
+            font-size: 13px;
+            background-image: url(Dashboard/img/li.png);
+            background-repeat: no-repeat;
+            padding-left: 15px;
+            height: auto;
+        }
+
+        .ums-menu .ums-navigation #top-search .dropdbmenu .menuclass h4 {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .ums-menu .ums-navigation #top-search .dropdbmenu .menuclass .quickcheck {
+            width: 15%;
+            float: left;
+        }
+
+        .ums-menu.ums-fixed-top .ums-navigation #top-search .dropdbmenu {
+            top: 63px;
+        }
+
+        .ums-menu.ums-fixed-top .ums-navigation #top-search {
+            padding-top: 23px;
+            padding-bottom: 23px;
+        }
+
+        .ums-menu.ums-fixed-top .ums-navigation #top-search .drop-search input.searchmenu {
+            font-size: 24px;
+            padding: 0;
+        }
+
+        #top-search {
+            float: right;
+            padding: 38px 0;
+            margin-left: 15px;
+        }
+
+        #top-search a {
+            display: block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            color: #333;
+            -webkit-transition: color .3s ease-in-out;
+            -o-transition: color .3s ease-in-out;
+            transition: color .3s ease-in-out;
+            text-align: left;
+            margin-left: 25px;
+            overflow: visible;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-top: -9px;
+        }
+
+        #top-search .drop-search li.menuclass a {
+            width: auto !important;
+            height: 20px !important;
+            margin-top: 0 !important;
+        }
+
+        #top-search a {
+            z-index: 11
+        }
+
+        #top-search a i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transition: opacity .3s ease;
+            -o-transition: opacity .3s ease;
+            transition: opacity .3s ease
+        }
+
+        #top-search a i.fa-close,
+        body.top-search-open #top-search a i.fa-search {
+            opacity: 0
+        }
+
+        body.top-search-open #top-search a i.fa-close {
+            opacity: 1;
+            z-index: 11;
+            font-size: 16px
+        }
+
+        #top-search .drop-search {
+            opacity: 0;
+            z-index: -2;
+            position: absolute;
+            width: 100% !important;
+            padding: 15px;
+            background: #FFF;
+            margin: 0;
+            top: 0;
+            left: 0;
+            -webkit-transition: opacity .3s ease-in-out;
+            -o-transition: opacity .3s ease-in-out;
+            transition: opacity .3s ease-in-out
+        }
+
+        body.top-search-open #top-search .drop-search {
+            opacity: 1;
+            z-index: 10
+        }
+
+        #top-search .drop-search input.searchmenu {
+            box-shadow: none !important;
+            border-radius: 0;
+            border: 0;
+            outline: 0 !important;
+            font-size: 32px;
+            padding: 10px 80px 10px 0;
+            height: 100%;
+            background-color: transparent;
+            color: #333;
+            font-weight: 700;
+            margin-top: 0 !important;
+            letter-spacing: 2px -webkit-transition: margin .4s ease, padding .4s ease;
+            -o-transition: margin .4s ease, padding .4s ease;
+            transition: margin .4s ease, padding .4s ease;
+            float: left;
+        }
+
+        .search-close {
+            position: absolute !important;
+            right: 50px;
+            top: 40px;
+            z-index: 999;
+            color: #000;
+        }
+
+        .ums-toogle-menu {}
+
+        @media (max-width: 768px) {
+            .mega-menu-content {
+                column-count: 1;
+            }
+
+            .ums-nav {
+                display: none;
+            }
+
+            .ums-menu .brand img {
+                height: 50px;
+            }
+
+            .ums-menu .ums-navigation ul li>a {
+                line-height: 22px;
+                padding: 25px 15px;
+            }
+
+            .st-img {
+                display: none
+            }
+
+            .navbar-nav .nav-link::after {
+                float: right !important;
+            }
+
+            .logout-btn {
+                display: block;
+                letter-spacing: 1px;
+                color: #6f6f6f;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 1px;
+                text-transform: capitalize;
+                padding: 10px 14px;
+                background: none;
+                border-radius: 0;
+                margin-top: auto;
+            }
+
+            .masonry-with-columns {
+                columns: 2 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .masonry-with-columns {
+                columns: 1;
+            }
+
+            .ums-menu .ums-navigation ul li .ums-mega-menu {
+                column-count: 1;
+            }
+
+            .ums-menu .ums-navigation #top-search .dropdbmenu {
+                height: 300px;
+                width: 98%;
+                top: 80px;
+                left: 5px;
+            }
+
+            .mmenu-open {
+                display: block !important;
+            }
+
+            .ums-menu {
+                height: auto;
+                padding: 15px 0;
+            }
+
+            .ums-menu .ums-navigation ul li {
+                width: 100%;
+            }
+
+            .ums-menu .ums-navigation ul li>a {
+                padding: 10px 25px;
+            }
+
+            #top-search {
+                padding: 0;
+                margin-left: 0;
+            }
+
+            #top-search-trigger {
+                margin-top: -50px;
+                margin-right: 15px;
+            }
+
+            #top-search .drop-search {
+                top: -80px;
+                padding: 6px 15px;
+            }
+
+            .ums-toogle-menu {
+                display: inline-block;
+                z-index: 999;
+                position: relative;
+            }
+
+            .ums-menu .ums-navigation {
+                background: #fbfbfb;
+                margin-top: 15px;
+                box-shadow: 0px 2px 4px #ccc;
+            }
+
+            .header-marquee {
+                display: none;
+            }
+
+            .ums-menu .brand {
+                float: none;
+                display: inline-block;
+                padding: 0;
+                position: relative;
+                left: 30%;
+            }
+
+            .ums-menu.ums-fixed-top .brand img {
+                height: 50px;
+            }
+
+            .ums-menu .ums-navigation {
+                float: none;
+                width: 100%;
+                background: #FFF;
+                position: absolute;
+                left: 0;
+                z-index: 99;
+            }
+
+            .ums-menu .ums-navigation ul {
+                float: none
+            }
+
+            .top-bar {
+                z-index: 10;
+                width: 100%;
+            }
+
+            .navbar-nav {
+                margin: 0;
+            }
+
+            .ums-menu.ums-fixed-top {
+                position: fixed;
+                box-shadow: none;
+                border-top: 1px solid #e5e5e5;
+                top: 43px;
+                height: 80px;
+            }
+        }
+
+        .ui-dialog {
+            position: fixed !important;
+            z-index: 90;
+        }
+
+        .ui-dialog .dialog-height {
+            height: auto !important;
+        }
+
+        .ui-dialog .ui-dialog-titlebar-close span {
+            background-image: url(Images/red_cross_icon.gif) !important;
+            background-repeat: no-repeat;
+        }
+
+
+        /* for Modal css*/
+
+        .ui-dialog-title {
+            background: #F68121;
+            display: block;
+            text-align: center;
+            color: #FFF;
+            padding: 5px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 1px #333;
+        }
+
+        .ui-widget-overlay {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, .5);
+            z-index: 1031;
+        }
+
+        .ui-dialog {
+            z-index: 1032 !important;
+        }
+
+        .ui-front {
+            z-index: 1000;
+        }
+
+        .ui-dialog-titlebar {
+            position: relative;
+        }
+
+        .no-close .ui-dialog-titlebar-close {
+            position: absolute;
+            top: 7px;
+            right: 10px;
+            border: 0;
+            background: #FFF;
+            border-radius: 15px;
+        }
+
+        .no-close .ui-dialog-titlebar-close {
+            display: none;
+        }
+
+        #btnClose {
+            background: #F68121;
+            border-radius: 15px;
+            color: #FFF;
+            border: 0;
+            padding: 3px 15px;
+        }
+
+        #myButton {
+            background: #F68121;
+            border-radius: 15px;
+            color: #FFF;
+            border: 0;
+            padding: 3px 15px;
+            margin-bottom: 25px;
+        }
+
+        .disableClosedDialog {
+            margin-left: 10px;
+            background-color: none;
+            color: lightgray;
+            padding: 3px;
+            cursor: default;
+            font-weight: normal;
+        }
+
+        .enableClosedialog {
+            margin-left: 10px;
+            background-color: lightgreen;
+            color: black;
+            padding: 3px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #progname {
+            width: 250px;
+        }
+
+        .main-menu .menu-button-mobile {
+            display: none;
+            position: absolute;
+            right: -28px;
+            background: #f1f1f1;
+            padding: 8px 8px 8px 6px;
+            font-size: 18px;
+            border: 1px solid #aaa;
+            border-left-color: rgb(170, 170, 170);
+            border-left-style: solid;
+            border-left-width: 1px;
+            border-radius: 0 6px 6px 0;
+            border-left: 0;
+        }
+
+        @media all and (max-width: 1300px) {
+            #progname {
+                width: 182px;
+            }
+
+            #idopt {
+                column-count: 2;
+            }
+        }
+
+        @media all and (min-width: 992px) {
+            .navbar .nav-item .dropdown-menu {
+                display: none;
+            }
+
+            /*.navbar .nav-item:hover .nav-link {
+                color: #fff;
+            }*/
+
+            .navbar .nav-item:hover .dropdown-menu {
+                display: block;
+            }
+
+            .navbar .nav-item .dropdown-menu {
+                margin-top: 0;
+            }
+        }
+
+        @media(max-width:767px) {
+            .menu {
+                top: 40px !important;
+            }
+
+            .main-menu .menu-button {
+                display: none !important;
+            }
+
+            .main-menu .menu-button-mobile {
+                display: block;
+            }
+        }
+    </style>
+    <link href="Dashboard/css/theme.css" rel="stylesheet" />
+    <link href="Dashboard/css/icheck.css" rel="stylesheet" />
+    <link href="Dashboard/bootstrap-toastr/toastr.min.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="App_Themes/purple/StyleSheet1.css" type="text/css" rel="stylesheet" />
+    <link
+        href="/LpuUms/WebResource.axd?d=EFjvvw03I-qWJ1M2kiKip7-K93Gq0sPGo_DoE2s2TSGZaQ5aeT5dlA_VEctzn_H3jYqMlW30-WgDlDKve-UcAwxYviFU6C5rugsXC_JopxGukDvzKkklHF4P4u2AgvycdEhRR5DFkdcLq01DwZfDfg2&amp;t=637887782576584614"
+        type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+    <link
+        href="/LpuUms/WebResource.axd?d=iRvtG_52nRe3qtmT7s2t7y3U1uvgaETWm5LTh1bVkHqj_fs_rkKPWYwzsY5Z6t0Wt6Zl-DtyDoMxg4B31i81NGC4komNE9tVnpi5lyBJTBOFq5LNP7ZEzGM8XWAR25ek00S2YjDUVCIOaQx6r0B80uTDOAOBjUrowe4BJpGjuAc1&amp;t=637887782576584614"
+        type="text/css" rel="stylesheet" class="Telerik_stylesheet" />
+    <title>
+        Student Dashboard
+    </title>
+</head>
+
+<body id="app-container" class="ltr rounded menu-default sub-hidden menu-default show-spinner">
+    <form method="post" action="./StudentDashboard.aspx" id="aspnetForm">
+        <div class="aspNetHidden">
+            <input type="hidden" name="ctl00_RadScriptManager1_TSM" id="ctl00_RadScriptManager1_TSM" value="" />
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__VSTATE" id="__VSTATE"
+                value="H4sIAAAAAAAEAFVQz0vrQBg01fgUDxHB+g4Sv4MXIYZs0qqXHp4/QJFCaFM9hk32a7p2u1t3N6/tX6+LHsTL8DHzMTPMhxf89fywLO+UtFoJM8L3lmvMlbG3tJ4/46Ysu56f1FYkyfmqnhjUOTVmpTS7R0u5KB/zcy6nSi+o5UoWSomCLwN/P0uvM5Klvd4hY93ONHDQ8b5w2+Guu4NuJ/zzwg2vBM4Yc3zQ3Ql3ClxbfzgZjiFfMVhxIQDXS9cK6NSihpsEGN2YCO4V1DMqG4SNajUs3beSoDRU6PogkP4lSS/TJE3Pthrn7zv/vfD4QVIX+LCokDFk41rzpTVNePqbv6UGx3Yj0MwQbRMejdAo8R/ZCCVDPVQMDy50gQI1n8evWMWTp/hHi+C3FMELauMGGqQJuYpJTEgW9/oR3LXCthoHElurqYggbyvBa7d8oeYoByQlU4rXN+SqX9GM9bzw5Lvovze6Hs+5/M7ksnETfgIDRwMg0AEAAA==" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+        </div>
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['aspnetForm'];
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+//]]>
+        </script>
+        <script
+            src="/LpuUms/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZEHqMqFtYQdik4A_X5BMEG_9yjgDCzYm54hnAn-m7a7pU3iz5cVV3cEXNyZ1q1xXoQ2&amp;t=637109961120000000"
+            type="text/javascript"></script>
+        <script
+            src="/LpuUms/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl00_RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a9ead301a-2c07-4fc5-be19-f8423a34e117%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%2c+Version%3d2016.1.113.45%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3acb3d1a3e-7303-48dc-a612-61700f912203%3a16e4e7cd%3af7645509%3a24ee1bba%3ac128760b%3a874f8ea2%3af46195d3%3a19620875%3acda80b3"
+            type="text/javascript"></script>
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                value="fG23sDqtNma8xtf/GEDNQZTcexqHusVjasFWBMmwtfiIr7ipmDvDHFNje+KaNXMMzz5iQUJbXjCToFATRA6YS63RT50n7x4YvmDDiv2hAfeaEW9l3eg5to7Zg8RHa6Jl" />
+        </div>
+        <script type="text/javascript">
+            //<![CDATA[
+            Sys.WebForms.PageRequestManager._initialize('ctl00$RadScriptManager1', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+        </script>
+
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+            <a class="navbar-brand" href="#"><img src="Dashboard/img/new-logo.png" class="img-fluid" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+                aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">Academics</a>
+                        <div class="scroll dropdown-menu" style="height: 450px;" data-always-visible="1"
+                            data-rail-visible="0">
+                            <div class="masonry-with-columns" id="Academics">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">Administrative </a>
+                        <div class="scroll dropdown-menu" style="height: 450px" data-always-visible="1"
+                            data-rail-visible="0">
+                            <div class="masonry-with-columns" id="Administrative">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">Important Links</a>
+                        <div class="scroll dropdown-menu" style="height: 450px;" data-always-visible="1"
+                            data-rail-visible="0">
+                            <div class="masonry-with-columns" id="ImportantLinks">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">Student Services</a>
+                        <div class="scroll dropdown-menu" style="height: 450px;" data-always-visible="1"
+                            data-rail-visible="0">
+                            <div class="masonry-with-columns" id="StudentServices">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">Quick Links</a>
+                        <div class="scroll dropdown-menu" style="height: 450px;" data-always-visible="1"
+                            data-rail-visible="0">
+                            <div class="masonry-with-columns" id="quickli">
+                                <div class="text-center" id="idinfo">
+                                    <b>No quick link available.<br />
+                                        Go to search menu to add quick link.</b>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div id="top-search">
+                    <a href="javascript:;" id="top-search-trigger" onclick="funtrigger(this)"><i
+                            class="fa fa-search"></i></a>
+                    <div class="drop-search">
+                        <input type="text" class="form-control searchmenu" placeholder="Search"
+                            onclick="fundisplaymenu()" /><a href="javascript:;" class="search-close"
+                            onclick="funtriggerClose(this)"><i class="fa fa-times"></i></a>
+                        <div class="dropdbmenu scroll">
+                            <ul id="idopt">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="header-icons d-inline-block align-middle ">
+                        <div id="p_info" class="position-relative d-inline-block " style="top:-25px">
+                            <div class="min-width-zero text-right">
+                                <h5 class="mb-0 d-none myd-none d-sm-block" id="p_name"></h5>
+                                <span class="text-muted text-small d-none myd-none d-sm-block" id="regno"></span>
+                                <span class="text-muted text-small myd-none d-none d-sm-block" id="progname"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user d-inline-block">
+                        <button class="btn btn-empty p-0" type="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <div class="st-img">
+                                <img id="p_picture" class="img-responsive img-circle" />
+                            </div>
+                        </button>
+                        <a class="logout-btn" href="RemoveSession.aspx">Sign out</a>
+                        <div class="dropdown-menu dropdown-menu-right mt-3">
+                            <a class="dropdown-item" href="frmchangepassword.aspx" target="_blank">Change Password</a>
+                            <a class="dropdown-item" href="frmAdPassword.aspx" target="_blank">Wifi Password</a>
+                            <a class="dropdown-item" href="frmStudentProfileUpdate.aspx" target="_blank">Profile
+                                Update</a>
+                            <a class="dropdown-item" href="RemoveSession.aspx">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar fixed-top d-none">
+            <div class="umslogo">
+                <img src="Dashboard/img/new-logo.png" class="img-fluid" />
+            </div>
+            <div class="ums-menu">
+                <div class="ums-navigation">
+                    <input type="hidden" id="hdSearchVal" />
+                    <ul class="ums-nav">
+                        <li class="">
+                            <a href="javascript:;">Academics<i class="fa fa-chevron-down"></i>
+                                <span class="arrow"></span>
+                            </a>
+                            <div class="ums-dropdown-menu">
+                            </div>
+                        </li>
+                        <li class="">
+                            <a href="javascript:;">Administrative<i class="fa fa-chevron-down"></i>
+                                <span class="arrow"></span>
+                            </a>
+                            <div class="ums-dropdown-menu">
+                                <div class="scroll" style="height: 450px;" data-always-visible="1"
+                                    data-rail-visible="0">
+                                    <div class="ums-mega-menu" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <a href="javascript:;">Important Links<i class="fa fa-chevron-down"></i>
+                                <span class="arrow"></span>
+                            </a>
+                            <div class="ums-dropdown-menu">
+                                <div class="scroll" style="height: 450px;" data-always-visible="1"
+                                    data-rail-visible="0">
+                                    <div class="ums-mega-menu" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <a href="javascript:;">Student Services<i class="fa fa-chevron-down"></i>
+                                <span class="arrow"></span>
+                            </a>
+                            <div class="ums-dropdown-menu">
+                                <div class="scroll" style="height: 450px;" data-always-visible="1"
+                                    data-rail-visible="0">
+                                    <div class="ums-mega-menu" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ums-single-menu">
+                            <a href="javascript:;">Quick Links<i class="fa fa-chevron-down"></i>
+                                <span class="arrow"></span>
+                            </a>
+                            <div class="ums-dropdown-single-menu">
+                                <div class="scroll" style="height: 450px;" data-always-visible="1"
+                                    data-rail-visible="0">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="menu">
+            <div class="main-menu">
+                <a href="#" class="menu-button">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+                <a href="#" class="menu-button-mobile">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+                <div class="scroll">
+                    <ul class="list-unstyled">
+                        <li class="active">
+                            <a href="StudentDashboard.aspx">
+                                <i class="iconsminds-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="default3.aspx">
+                                <img src="Dashboard/img/icon-ums.png" />
+                                <span>UMS Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="openurl('lpulive');" href="javascript:void(0)">
+                                <i class="iconsminds-speach-bubble" style="transform: scaleX(-1);"></i>
+                                <span>LPU Live</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="openurl('lputouch');" href="javascript:void(0)">
+                                <i class="iconsminds-smartphone-4 mb-1"></i>
+                                <span>LPU Touch</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="openapp.aspx?from=ums&toApp=myclass" target='_blank'>
+                                <i class="iconsminds-clock"></i>
+                                <span>My Class</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="openapp.aspx?from=ums&toApp=yourdost" target='_blank'>
+                                <i class="iconsminds-affiliate"></i>
+                                <span>YourDost</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="hrdMaximunTime" />
+        <input type="hidden" id="hrdIsUMSBlocked" />
+        <div class="modal">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content dialog-height" id="divTesting">
+
+                    <div class="modal-body" id="Bodymodalmarks">
+                        <div class="col-md-12">
+                            <div id="divUMSBlock"
+                                style="font-weight: bold; text-align: center; width: 100%; z-index: 99999">Your UMS is
+                                blocked due to following reasons</div>
+                            <div id="divMessage" style="z-index: 99999; height: 400px;" class="scroll">
+                            </div>
+                            <div style="text-align: center; z-index: 99999">
+                                <input type="checkbox" id="chkReadMessage" />
+                                I have read this information
+                                <input type="button" title="Click to confirm" value="Confirm" type="button" value="Ok"
+                                    id="btnClose" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main style="margin-top:120px !important;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-right pb-3">
+                        <script type="text/javascript">
+                            function EnableDisable() {
+                                // debugger;
+                                var checkbox = document.getElementById('ctl00_cphHeading_wcUserMessages1_chkConfirmation');
+                                var button = document.getElementById('ctl00_cphHeading_wcUserMessages1_btnOK');
+                                //        if ((document.getElementById('ctl00_cphHeading_wcUserMessages1_chkConfirmation') == null) || (document.getElementById('ctl00_cphHeading_wcUserMessages1_chkConfirmation') == 'undefined'))
+                                //        {
+                                //            var checkbox = document.getElementById('ctl00_ContentPlaceHolder1_wcUserMessages1_chkConfirmation');
+                                //            var button = document.getElementById('ctl00_ContentPlaceHolder1_wcUserMessages1_btnOK');
+                                //        
+                                //        }            
+
+                                // alert(checkbox);
+                                //alert(button);
+                                //alert(checkbox.checked);
+                                //if (checkbox.checked == true)
+                                //            button.disabled = (!checkbox.checked);
+                                //else
+                                //  button.disabled = true;
+                            }
+                        </script>
+                        <style type="text/css">
+                            .rtWrapperTopCenter .rtTitlebar {
+                                height: 30px;
+                                font-size: 16px;
+                                background: #cf710c !important;
+                                font-weight: 600;
+                                color: #FFF;
+                                text-align: center;
+                                width: 100%;
+                                text-transform: uppercase;
+                            }
+
+                            #RadToolTipWrapper_ctl00_wcUserPasswordDetail_HP_informationToolTip {
+                                background: #FFF;
+                                border-radius: 10px;
+                                overflow: hidden;
+                                box-shadow: 0 0 20px #999 !important;
+                            }
+
+                            .rtVisibleTitleBar {
+                                background: #cf710c !important;
+                            }
+
+                            #RadToolTipWrapper_ctl00_WcMainHeader1_wcUserPasswordDetail1_informationToolTip {
+                                height: 331px;
+                                left: 30% !important;
+                                position: fixed;
+                                top: 30% !important;
+                                visibility: visible;
+                                width: 510px !important;
+                                z-index: 8000;
+
+                            }
+
+                            #RadToolTipWrapper_ctl00_WcMainHeader1_wcUserPasswordDetail1_informationToolTip table {
+                                width: 100% !important;
+                            }
+                        </style>
+                        <div class="fg-password">
+                            <span></span>
+                            <span id="ctl00_wcUserPasswordDetail_HP_Label1" style="color: #636363;
+    font-size: 11px">UMS Pwd will expire after 80 days, Do change your pwd on or before 15-12-2022</span>
+                        </div>
+                        <div id="ctl00_wcUserPasswordDetail_HP_informationToolTip"
+                            style="background-color:Transparent;border-style:None;display:none;position:absolute;">
+
+                            <table>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <br />
+                                        <b style="color: #0e72a6">Dear User,</b>
+                                        <br />
+                                        <br />
+                                        <span style="color: #cf710c">Your password has Expired. You are requested to
+                                            change
+                                            the current password to access UMS.
+                                            <br />
+                                            Please click OK to change your password.<br />
+                                            <br />
+                                            <b>Thanks</b></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center">
+                                        <a id="ctl00_wcUserPasswordDetail_HP_btnOK" Class="btn btn-primary"
+                                            href="javascript:__doPostBack(&#39;ctl00$wcUserPasswordDetail_HP$btnOK&#39;,&#39;&#39;)">OK</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <input id="ctl00_wcUserPasswordDetail_HP_informationToolTip_ClientState"
+                                name="ctl00_wcUserPasswordDetail_HP_informationToolTip_ClientState" type="hidden" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="main-heading">Important Links and Information</h1>
+                        <div class="imp-links">
+                            <a class="btn btn-primary" href="frmMakeICashPaymentForHostelPolling.aspx" target="_blank"
+                                data-toggle="tooltip" data-placement="top" title=""
+                                data-original-title="Click to Book/ Modify Hostel Allocation">Hostel Booking</a>
+                            <a class="btn btn-primary" href="frmMtsMessage.aspx" target="_blank" data-toggle="tooltip"
+                                data-placement="top" title=""
+                                data-original-title="Click to Log Complaints/Suggestions">RMS</a>
+                            <a class="btn btn-primary" href="frmStudentFeeDashboard.aspx" target="_blank"
+                                data-toggle="tooltip" data-placement="top" title=""
+                                data-original-title="Fee Dashboard">Fee Dashboard</a>
+                            <a class="btn btn-primary" href="frmStudentsAcademicCalendar.aspx" target="_blank"
+                                data-toggle="tooltip" data-placement="top" title=""
+                                data-original-title="Academic Calendar">Academic Calendar</a>
+                            <a class="btn btn-primary" href="EmergencyNumbers.html" target="_blank"
+                                data-toggle="tooltip" data-placement="top" title=""
+                                data-original-title="Emergency Numbers">Emergency Numbers</a>
+                            <a class="btn btn-primary" href="frmExternalCertificates.aspx" target="_blank"
+                                data-toggle="tooltip" data-placement="top" title=""
+                                data-original-title="Certificate Request">Certificate Request</a>
+                            <a class="btn btn-primary m-1" href="frmPartTimeJobs.aspx" target="_blank"
+                                data-toggle="tooltip" data-placement="top" title=""
+                                data-original-title="Part time JOB">Part-time job Application</a>
+                            <a class="btn btn-success" data-toggle='modal' style="color: #fff;"
+                                data-target='#mdlWhatsappVerifyNo' data-original-title="Register your WhatsApp Number"
+                                onclick="getWhatsappno()">WhatsApp
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true" focusable="false" width="1em" height="1em"
+                                    style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967c-.273-.099-.471-.148-.67.15c-.197.297-.767.966-.94 1.164c-.173.199-.347.223-.644.075c-.297-.15-1.255-.463-2.39-1.475c-.883-.788-1.48-1.761-1.653-2.059c-.173-.297-.018-.458.13-.606c.134-.133.298-.347.446-.52c.149-.174.198-.298.298-.497c.099-.198.05-.371-.025-.52c-.075-.149-.669-1.612-.916-2.207c-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372c-.272.297-1.04 1.016-1.04 2.479c0 1.462 1.065 2.875 1.213 3.074c.149.198 2.096 3.2 5.077 4.487c.709.306 1.262.489 1.694.625c.712.227 1.36.195 1.871.118c.571-.085 1.758-.719 2.006-1.413c.248-.694.248-1.289.173-1.413c-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"
+                                        fill="white" />
+                                </svg>
+                                &nbsp;</a>
+                        </div>
+                        <br />
+                        <div class="separator mb-10"></div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <br />
+                        <div class="row mb-4">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12 col-sm-12 gc-card">
+                                <div class="card mt-3">
+                                    <div class="card-body pb-0">
+                                        <h4 class="card-title text-center mytitle"><i
+                                                class="iconsminds-bookmark"></i>Happening</h4>
+                                        <div id="Happ" class="">
+                                            <div id="HappeningData">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col-6 pt-9 lh1 text-left">* Happening Events in LPU</div>
+                                            <div class="col-6 text-right"><a class="btn btn-primary"
+                                                    href="https://happenings.lpu.in" target="_blank">View More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12 col-sm-12 gc-card">
+                                <div class="card mt-3">
+                                    <div class="card-body pb-0">
+                                        <h4 class="card-title text-center mytitle"><i class="iconsminds-bookmark"></i>
+                                        </h4>
+                                        <div id="DT1" class="">
+                                            <div id="DT">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-xs-12 col-sm-12 mb-4">
+                                <div class="card mt-3">
+                                    <div class="card-body pb-0">
+                                        <h4 class="card-title text-center mytitle"><i class="iconsminds-books"></i>My
+                                            Courses</h4>
+                                        <div id="CoursesList" class="TodayEvents scroll ps ps--active-y">
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col-6 pt-1 text-left" id="cgpa" data-toggle='modal'
+                                                data-backdrop='static' data-target='#modalmarks' onclick="getMarks()"
+                                                style="cursor: pointer;">* My Courses List</div>
+                                            <div class="col-6 pt-1 text-right" id="AttPercent" data-toggle='modal'
+                                                data-backdrop='static' data-target='#AttmyModal' onclick="getAtt()"
+                                                style="cursor: pointer;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-xs-12 col-sm-12 mb-4">
+                                <div class="card mt-3">
+                                    <div class="card-body pb-0">
+                                        <h4 class="card-title text-center mytitle"><i
+                                                class="iconsminds-money-bag"></i>Fee</h4>
+                                        <div id="FeePending" class="scroll TodayEvents ps ps--active-y text-center">
+                                            <div id="feebalance">
+                                            </div>
+                                            <br />
+                                            <i class="iconsminds-dollar icon-2"></i>
+                                            <br />
+                                            <a href="frmStudentFeePaymentSchedule.aspx" target="_blank">
+                                                <b>Fee Notification</b></a>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col-12 text-right"><a data-toggle='modal'
+                                                    class="btn btn-sm btn-primary" data-backdrop='static'
+                                                    data-target='#myModal' onclick='getPaymentTransactions()'
+                                                    href='#'>Transactions</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 30px;">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-xs-12 col-sm-12 mt-4">
+                                <div class="card mt-3">
+                                    <div class="card-body pb-0">
+                                        <h4 class="card-title text-center mytitle1"><i
+                                                class="iconsminds-bookmark"></i>Pending Assignments</h4>
+                                        <div id="PendingAssignments" class="scroll TodayEvents ps ps--active-y">
+                                        </div>
+                                    </div>
+                                    <div class="card-footer mt-2">
+                                        <div class="row mt-2 mb-2">
+                                            <div class="col-6 pt-1 text-left lh1">* Assignments Pending to Upload</div>
+                                            <div class="col-6 pt-1 text-right"><a
+                                                    href="frmstudentdownloadassignment.aspx"
+                                                    class="btn btn-sm btn-primary" target='_blank'>View Assignments</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-xs-12 col-sm-12 mt-4">
+                                <div class="card mt-3">
+                                    <div class="card-body pb-0">
+                                        <h4 class="card-title text-center mytitle1"><i class="iconsminds-notepad"></i>My
+                                            Messages</h4>
+                                        <div id="MyMessage" class="scroll TodayEvents ps ps--active-y">
+                                        </div>
+                                    </div>
+                                    <div class="card-footer mt-2">
+                                        <div class="row mt-2 mb-2">
+                                            <div class="col-6 pt-1 text-left">* Messages Sent by Teachers</div>
+                                            <div class="col-6 pt-1 text-right">
+                                                <button type="button" class="btn btn-sm btn btn-primary"
+                                                    data-toggle="modal" data-backdrop="static"
+                                                    data-target="#exampleModalRight" onclick="getMyAllMessages()">All
+                                                    Messages</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-xs-12 col-sm-12 mt-4">
+                                <div class="card mt-3">
+                                    <div class="card-body pb-0">
+                                        <h4 class="card-title text-center mytitle"><i
+                                                class="iconsminds-bookmark"></i>Events</h4>
+                                        <div id="PendingAssignmentVA" class="scroll TodayEvents ps ps--active-y">
+                                            <div id="EventsData" class="owl-carousel owl-theme">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer mt-2">
+                                        <div class="row mt-2 mb-2">
+                                            <div
+                                                class="col-xs-6 col-xl-8 d-lg-none d-md-none d-none d-sm-none d-xs-none d-xl-block">
+                                                Get your event listed here through email <a
+                                                    href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="630615060d1710230f13164d000c4d0a0d">[email&#160;protected]</a>
+                                                <a data-toggle="modal" style="cursor: pointer" data-backdrop="static"
+                                                    data-target="#DSWContactDetails" class="splbtn">View Details</a>
+                                            </div>
+                                            <div class="col-xs-12 col-xl-4 text-right"><a
+                                                    class="btn btn-primary float-right" href="frmEventsList.aspx"
+                                                    target="_blank">All Events</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col-12">
+                        <h1 class="main-heading">Placement Details</h1>
+                        <div style="float: right" class="m-2">
+                        </div>
+                        <div class="separator mb-5"></div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-xl-5 col-lg-5 col-md-5 col-xs-12 col-sm-12 mt-4">
+                                <div class="card card-body">
+                                    <h4 class="card-title text-center mytitle"><i
+                                            class="iconsminds-calendar-1"></i>Recently Placed</h4>
+                                    <div id="hh4" class="scroll ps ps--active-y" style="margin-top: 20px">
+                                        <div id="PlacedStudentsList1"
+                                            class="scroll ps ps--active-y TodayDriveEventsScroll">
+                                            <div id="PlacedStudentsList"
+                                                class="owl-carousel owl-theme home-promo.promo-light">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-7 col-lg-7 col-md-7 col-xs-12 col-sm-12 mt-4">
+                                <div class="card">
+                                    <div class="card-body pb-0">
+                                        <h4 class="card-title text-center mytitle"><i
+                                                class="iconsminds-notepad"></i>Today's Placement Drives</h4>
+                                        <div id="todayDrives" class="scroll TodayDriveEvents ps ps--active-y">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row' style='margin-top: 30px;' id="gg">
+                    <div class='col-12'>
+                        <h1 class='main-heading'>Examination & University Guidelines</h1>
+                        <div style='float: right' class='m-2'></div>
+                        <div class='separator mb-5'></div>
+                    </div>
+                    <div class='col-md-12'>
+                        <div class='row' style='margin-top: 20px;'>
+                            <div class='col-xl-6 col-lg-6 col-md-12 col-xs-12 col-sm-12 mt-4'>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-xs-6 col-sm-6 mb-4">
+                                            <div class="card align-center" style="background: #fff; min-height: 110px;">
+                                                <div class="card-body align-items-center">
+                                                    <div style="text-align: center;">
+                                                        <a href="Policy/StudentFee/S.No.%206.pdf" target="_blank">
+                                                            <i class="iconsminds-student-male center"
+                                                                style="font-size: 20px;"></i>
+                                                            <h6>Scholarship Guidelines</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-xs-6 col-sm-6 mb-4">
+                                            <div class="card align-center" style="background: #fff; min-height: 110px;">
+                                                <div class="card-body align-items-center">
+                                                    <div style="text-align: center;">
+                                                        <a href="Static%20Information/Academic%20calender/An%20Extract%20of%20changes%20in%20rules%20w%20e%20f%20Session%202013-14.pdf"
+                                                            target="_blank">
+                                                            <i class="iconsminds-book center"
+                                                                style="font-size: 20px;"></i>
+                                                            <h6>Academic Rules</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-xs-6 col-sm-6 mb-4">
+                                            <div class="card align-center" style="background: #fff; min-height: 110px;">
+                                                <div class="card-body align-items-center">
+                                                    <div style="text-align: center;">
+                                                        <a href="Static%20Information/Academic%20calender/An%20Extract%20of%20changes%20in%20rules%20w%20e%20f%20Session%202013-14.pdf"
+                                                            target="_blank">
+                                                            <i class="iconsminds-receipt-4 center"
+                                                                style="font-size: 20px;"></i>
+                                                            <h6>Examination Rules</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-xs-12 col-sm-12 mb-4">
+                                            <div class="card align-center" style="background: #fff; min-height: 110px;">
+                                                <div class="card-body align-items-center">
+                                                    <div style="text-align: center;">
+                                                        <a href="Static%20Information/Library%20Policy.pdf"
+                                                            target="_blank">
+                                                            <i class="iconsminds-library center"
+                                                                style="font-size: 20px;"></i>
+                                                            <h6>Library Rules</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-xs-12 col-sm-12 mb-4">
+                                            <div class="card align-center" style="background: #fff; min-height: 110px;">
+                                                <div class="card-body align-items-center">
+                                                    <div style="text-align: center;">
+                                                        <a href="Static%20Information/GUIDELINES_FOR_CREDIT_TRANSFER_OPTION.pdf"
+                                                            target="_blank">
+                                                            <i class="iconsminds-switch center"
+                                                                style="font-size: 20px;"></i>
+                                                            <h6>Credit Transfer</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-xs-12 col-sm-12 mb-4">
+                                            <div class="card align-center" style="background: #fff; min-height: 110px;">
+                                                <div class="card-body align-items-center">
+                                                    <div style="text-align: center;">
+                                                        <a href="frmDSAStudentPolicyView.aspx" target="_blank">
+                                                            <i class="iconsminds-evernote center"
+                                                                style="font-size: 20px;"></i>
+                                                            <h6>Welfare Guidelines</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='col-xl-6 col-lg-6 col-md-12 col-xs-12 col-sm-12 mt-4'>
+                                <div class='card'>
+                                    <div class='card-body pb-0'>
+                                        <h4 class='card-title text-center mytitle'><i
+                                                class='iconsminds-notepad'></i>Seating Plan</h4>
+                                        <div id='SeatingPlan' class='scroll TodayDriveEvents ps ps--active-y'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-md-12">
+                        <h1 class="main-heading">Important Announcements</h1>
+                        <div style="float: right" class="m-2">
+                            <a href="frmHistoryAnnouncemnt.aspx" class="btn btn-primary mb-5 m-1" target="_blank">View
+                                All Announcements</a>
+                        </div>
+                        <div class="separator mb-5"></div>
+                    </div>
+                    <div class="col-md-12" style="margin-top: 4px">
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h4 class="card-title text-center mytitle"><i
+                                        class="iconsminds-calendar-1"></i>Announcements</h4>
+                                <div id="hh" class="scroll ps ps--active-y">
+                                    <div class="col-12 ">
+                                        <ul class="nav nav-tabs separator-tabs ml-0 mb-5" id="tablist" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="first-tab" data-toggle="tab"
+                                                    href="#first" role="tab" aria-controls="first"
+                                                    aria-selected="true">Academic</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="second-tab" data-toggle="tab" href="#second"
+                                                    role="tab" aria-controls="second"
+                                                    aria-selected="true">Administrative/Misc</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="third-tab" data-toggle="tab" href="#third"
+                                                    role="tab" aria-controls="third"
+                                                    aria-selected="true">Co-curricular/Sports/Cultural</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="fourth-tab" data-toggle="tab" href="#fourth"
+                                                    role="tab" aria-controls="fourth" aria-selected="true">Placement</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="fifth-tab" data-toggle="tab" href="#fifth"
+                                                    role="tab" aria-controls="fifth"
+                                                    aria-selected="false">Examinaton</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="sixth-tab" data-toggle="tab" href="#sixth"
+                                                    role="tab" aria-controls="sixth" aria-selected="false">HR</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="seventh-tab" data-toggle="tab" href="#seventh"
+                                                    role="tab" aria-controls="seventh" aria-selected="true">Research</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content scroll ps ps--active-y dataTables_scroll TodayAnnouncements"
+                                            id="tabcontent">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col-12">
+                        <h1 class="main-heading">Know your Authorities</h1>
+                        <div style="float: right" class="m-2">
+                        </div>
+                        <div class="separator mb-5"></div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row" style="margin-top: 40px;">
+                            <div class="owl-carousel owl-theme" id="heads">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="DSWContactDetails">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h4 class="modal-title">Division of Student Welfare Contact Details</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <div class="modal-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th width="10%" align="center">Sr no.</th>
+                                            <th width="25%">Department/Cell Name</th>
+                                            <th width="65%">Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td align="center"><strong>1</strong></td>
+                                            <td>Department of Cultural Affairs</td>
+                                            <td>Services:<br>
+                                                Department of Cultural Affairs provides you the oppurtunity to learn
+                                                various art skills from the basic.You can join the following socities
+                                                free of cost. We teach you from the basic to expert level in
+                                                classes.Societies are : Dance, Music, Fine Arts , Theatre, Literary
+                                                etc.<br>
+                                                <br>
+                                                Contact Details:<br>
+                                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="89cafce5fdfcfbe8e5e8efefe8e0fbfac9e5f9fca7eae6a7e0e7">[email&#160;protected]</a>,
+                                                Mb : 9876644332
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><strong>2</strong></td>
+                                            <td>Sports</td>
+                                            <td>Services:<br>
+                                                We at Lovely Professional University believes that sports are a
+                                                fantastic way for youth to explore &amp; develop lifelong skills. We
+                                                have the wide variety of sports in campus as mentioned : Football,
+                                                Hockey, Cricket, Athletic,Weightlifting, kabaddi, Wushu and many
+                                                more.<br>
+                                                <br>
+                                                Contact Details:<br>
+                                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="c7b4b7a8b5b3b487abb7b2e9a4a8e9aea9">[email&#160;protected]</a>,
+                                                Mb : 9780036536
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><strong>3</strong></td>
+                                            <td>Student Organization Cell</td>
+                                            <td>Services:<br>
+                                                Student will get opportunity to start their own organizations to bring
+                                                students together who share the same interest.There is no registration
+                                                fee.<br>
+                                                <br>
+                                                Student will get Tier wise felicitation in terms of reimbursement,
+                                                university resources like seminar hall, auditorium etc., sponsorship
+                                                from internal and external sources, duty leave for organizers, transport
+                                                facility for out-campus event etc.<br>
+                                                <br>
+                                                Contact Details:<br>
+                                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="43302c206d273022032f33366d202c6d2a2d">[email&#160;protected]</a>
+                                                , Mb : 9988858588
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><strong>4</strong></td>
+                                            <td>Student Entrepreneurship Cell</td>
+                                            <td>Services:<br>
+                                                It is a platform for students to recognize and utilize their skills in
+                                                identifying opportunities and creating innovative business models.It
+                                                provides mentoring,identifying and Live Interaction with Industry
+                                                Stalwarts/Investors.<br>
+                                                <br>
+                                                SEC has 3 Clubs in the domain of Technology, Marketing &amp;
+                                                Finance,Students can join these clubs free of cost.<br>
+                                                <br>
+                                                Certificates of Recognition Entrepreneurship learning Meeting successful
+                                                entrepreneur
+                                                Venture Starting<br>
+                                                <br>
+                                                Contact Details<br>
+                                                :<a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="b6c5d3d598d2c5d7f6dac6c398d5d998dfd8">[email&#160;protected]</a>
+                                                , Mb : 6239652286
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><strong>5</strong></td>
+                                            <td>Educational Tie ups &amp; Skill Development</td>
+                                            <td>Services:<br>
+                                                We provide carrier enhancement opportunity through varies educational
+                                                academies. We provide Certification Courses, Coaching&#39;s like GATE
+                                                IAS,IPS,IRS,PCS,IFS Govt. Jobs like Bank PO,Clerk etc. Programming
+                                                Languages
+                                                <br>
+                                                <br>
+                                                Workshops on technical and Non technical fields<br>
+                                                <br>
+                                                Contact Details:<br>
+                                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="93f6e7e0f7bdf7e0e4d3ffe3e6bdf0fcbdfafd">[email&#160;protected]</a>
+                                                , Mb : 8725985407
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><strong>6</strong></td>
+                                            <td>Student Research &amp; Project Cell</td>
+                                            <td>Services:<br>
+                                                This cell is resolute for working on student and university research
+                                                oriented projects based on different technologies having focus on
+                                                industrialized projects/products.Research projects and industrial
+                                                projects.
+                                                <br>
+                                                <br>
+                                                Giving platform to file patents, research papers and innovation.<br>
+                                                <br>
+                                                Contact Details:<br>
+                                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="5427202130313a20263a2437313838143824217a373b7a3d3a">[email&#160;protected]</a>,
+                                                Mb : 9888121794
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><strong>7</strong></td>
+                                            <td>Department of Youth Capital</td>
+                                            <td>Services:<br>
+                                                It is a place where all the activities and events are organized,
+                                                administrated and conducted by the student themselves.
+                                                <br>
+                                                It is one of the exceptional centers where one can actively convert
+                                                hobbies into implementable projectsClub entry free
+                                                <br>
+                                                Certificates of Recognition<br>
+                                                Corporate exposure<br>
+                                                <br>
+                                                Contact Details:<br>
+                                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="187c617b367c6b795874686d367b77367176">[email&#160;protected]</a>,
+                                                Mb : 9888046609
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><strong>8</strong></td>
+                                            <td>Community Service Cell</td>
+                                            <td>Services:<br>
+                                                The motto is to develop the personality of a student through social
+                                                service. You can
+                                                join the following Services : NSS, NCC, Indian Red Cross Society ,Local
+                                                Engagement Programs etc.<br>
+                                                <br>
+                                                Contact Details:<br>
+                                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="aecdddcd80caddcfeec2dedb80cdc180c7c0">[email&#160;protected]</a>,
+                                                Mb : 9041356513
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><strong>9</strong></td>
+                                            <td>Student Entertainment &amp; Event Management Cell</td>
+                                            <td>Services:<br>
+                                                We provide platform to students to manage and co-ordinate the Mega
+                                                Events in the campus which in turn will enhance their overall
+                                                personality.Club entry is free.Certificates of Recognition.<br>
+                                                <br>
+                                                Contact Details:<br>
+                                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="b8cbdddddb96dccbd9f8d4c8cd96dbd796d1d6">[email&#160;protected]</a>,
+                                                Mb : 9779000636
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><strong>10</strong></td>
+                                            <td>Uni TV Network</td>
+                                            <td>Services:<br>
+                                                Ytv “UNI TV Network” provides a real hands on experience to students
+                                                which is out of
+                                                book learning .Club entry free. Certificates of Recognition.
+                                                <br>
+                                                <br>
+                                                Two Student Organizations to explore the talent &amp; for real exposure
+                                                of industry.<br>
+                                                <br>
+                                                Contact Details:<br>
+                                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                                    data-cfemail="026e6d74676e7b7674426e72772c616d2c6b6c">[email&#160;protected]</a>,
+                                                Mb : 9915020454
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h4 class="modal-title">Fee Transactions</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <div class="modal-body" id="mdcontent">
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade modal-right" id="exampleModalRight" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalRight" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="flex: 0 0 0px !important;">
+                                <h4 class="modal-title">My Messages</h4>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body scroll ps ps--active-y">
+                                <div id="mymessageall" class=" message-list">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">
+                                    Close</button>
+                                <a type="button" class="btn btn-primary" href="frmStudentsMyMessages.aspx">Search
+                                    Messages</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="AttmyModal">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <center>
+                                    <h4 class="modal-title">Student Attendance</h4>
+                                </center>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body" id="mdatt">
+                                <div class="col-md-12">
+                                    <ul class="nav nav-tabs card-header-tabs ml-0 mr-0 mb-1" role="tablist">
+                                        <li class="nav-item w-50 text-center">
+                                            <a class="nav-link active" id="first-tab" data-toggle="tab"
+                                                href="#firstFull" role="tab" aria-selected="true">
+                                                <h3>Attendance Summary</h3>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item w-50 text-center">
+                                            <a class="nav-link" id="second-tab" data-toggle="tab" href="#secondFull"
+                                                role="tab" aria-selected="false">
+                                                <h3>Attendance Details</h3>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="p-4 h-100">
+                                        <div class="tab-content h-100">
+                                            <div class="tab-pane fade h-100 active show" id="firstFull" role="tabpanel"
+                                                aria-labelledby="first-tab">
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover table-bordered">
+                                                        <thead class="top-heading2">
+                                                            <tr>
+                                                                <th>Course</th>
+                                                                <th>Last Attended</th>
+                                                                <th>Duty Leave</th>
+                                                                <th>Total Delivered (T,L,P)</th>
+                                                                <th>Total Attended (T,L,P)</th>
+                                                                <th>Total Percentage</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="top-table" id="AttSummary">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <p style="color: red; font-size: 20px; font-weight: 600;">
+                                                    Note:
+                                                </p>
+                                                <ol class="text-align-left"
+                                                    style="color: red; font-weight: 600; line-height: 20px;">
+                                                    <li>The attendance report is a provisional report only.</li>
+                                                    <li>The attendance report may not include duty leave benefit that
+                                                        has not been punched in the database.</li>
+                                                    <li>The attendance report does not include any bonus attendance
+                                                        benefits for the previous terms as applicable in the rules.</li>
+                                                    <li>The attendance for courses with G Grade will not be counted in
+                                                        the aggregate attendance calcuated at time of End Term Exam.
+                                                    </li>
+                                                    <li>Attendance of Non-credited Placement classes will be added
+                                                        towards the final attendance.</li>
+                                                </ol>
+                                            </div>
+                                            <div class="tab-pane fade h-100" id="secondFull" role="tabpanel"
+                                                aria-labelledby="second-tab">
+                                                <div class='lh1 text-left'>* Click to expand for Details</div>
+                                                <br />
+                                                <div id="accordion">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="app-menu-button d-inline-block d-xl-none" href="#">
+                                        <i class="simple-icon-options"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">
+                                    Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="bookappointment">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h4 class="modal-title">Book Appointment</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <div class="modal-body" id="mdcontentAppoint">
+                                <div class="center col-md-12" style="text-align:center">
+                                    <h3 id="rmsmsg">In case of any query/issue related to "Mentorship", <a
+                                            href="https://ums.lpu.in/LpuUms/frmMtsMessage.aspx?Id=1515" target="_blank"
+                                            class="AttPercent"><b>Click Here</b></a></h3>
+                                </div>
+                                <div id="ContentData">
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Appointment Reason</label>
+                                                <textarea id="txtDetails" name="txtDetails"
+                                                    class="form-control typeahead" placeholder="Appointment Details"
+                                                    required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Mobile No</label>
+                                                <input class="form-control" placeholder="Your Mobile No" id="MobNo"
+                                                    maxlength="12" required type="number" />
+                                            </div>
+                                            <div class="col-md-6" id="divddlRelation">
+                                                <label>Relation</label>
+                                                <select class="form-control" id="ddlRelation" required>
+                                                    <option value="">Select</option>
+                                                    <option value="Father">Father</option>
+                                                    <option value="Mother">Mother</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="row">
+                                            <div class="col-md-6 text-left">
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <input type="reset" class="btn btn-outline-primary" value="Reset" />
+                                                <input type="button" class="btn btn-primary" value="Book Appointment"
+                                                    onclick="SaveAppointment()" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="PendingRequests">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modalmarks">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <center>
+                                    <h4 class="modal-title">Student Marks Details</h4>
+                                </center>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body" id="Bodymodalmarks">
+                                <div class="col-md-12">
+                                    <div class="center col-md-12" style="text-align:center">
+                                        <h3>In case of any query/issue related to “Result”, <a
+                                                href="frmMtsMessage.aspx?Id=22" target="_blank"
+                                                class="AttPercent"><b>Click Here</b></a></h3>
+                                        <br />
+                                    </div>
+                                    <ul class="nav nav-tabs card-header-tabs ml-0 mr-0 mb-1" role="tablist">
+                                        <li class="nav-item w-50 text-center">
+                                            <a class="nav-link active" id="first-tab1" data-toggle="tab"
+                                                href="#firstFull1" role="tab" aria-selected="true">
+                                                <h3>Marks Details</h3>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item w-50 text-center">
+                                            <a class="nav-link" id="second-tab1" data-toggle="tab" href="#secondFull1"
+                                                role="tab" aria-selected="false">
+                                                <h3>Grade Details</h3>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="p-4 h-100">
+                                        <div class="tab-content h-100">
+                                            <div class="tab-pane fade h-100 active show" id="firstFull1" role="tabpanel"
+                                                aria-labelledby="first-tab">
+                                                <div class='lh1 text-left'>* Click to expand for Details</div>
+                                                <br />
+                                                <div id="marksdetails">
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade h-100" id="secondFull1" role="tabpanel"
+                                                aria-labelledby="second-tab">
+                                                <div id="GradeDetails">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">
+                                    Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" tabindex="-1" role="dialog" id="mdlWhatsappVerifyNo" data-backdrop="static">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="padding-bottom: 0;">
+                                <h4 class="modal-title"><span class="fa fa-whatsapp"
+                                        style="color: #25D366; font-weight: bold;"></span>&nbsp;WhatsApp Notification
+                                    Preference</h4>
+                                <br />
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="padding-top: 0;">
+                                <form id="frmWhatsappVerifyNo" name="frmWhatsappVerifyNo">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p style="text-align: justify">Appreciating fast and effective
+                                                communication, it is highly recommended that you enable Whatsapp
+                                                notifications for important updates</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mt10">
+                                        <div class="col-12">
+                                            <div class="form-check mb10">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" value="current"
+                                                        name="rdWhatsappVerify" checked>
+                                                    <span>Enable WhatsApp notifications on current number </span><span
+                                                        id="WhatAppNo"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb10">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" value="other"
+                                                        name="rdWhatsappVerify">
+                                                    <span>Enable WhatsApp notifications on other number </span>
+                                                </label>
+                                                <input class="form-control" name="txtAlternateNo" id="txtAlternateNo"
+                                                    tabindex="1" aria-placeholder="Other whatsapp number"
+                                                    placeholder="Enter your Alternate Contact No" type="number"></input>
+                                            </div>
+                                            <div class="form-check mb10">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" value="disable"
+                                                        name="rdWhatsappVerify">
+                                                    <span>I don't want WhatsApp notifications.</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb10">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" value="noaccount"
+                                                        name="rdWhatsappVerify">
+                                                    <span>I don't have any number with WhatsApp activated on it.</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt20">
+                                        <div class="col-12 text-center">
+                                            <a class="btn btn-primary" onclick="SaveWhatsAppPref()"
+                                                style="color: #fff;">Save</a>
+                                            <button type="button" class="btn btn-outline-primary"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" id="refno" />
+                <script data-cfasync="false"
+                    src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                <script type="text/javascript">
+
+
+
+                    var roll = '3';
+                    if (roll.toString() == "3") {
+                        $("#divddlRelation").hide();
+                    }
+
+
+                    $('.multi-level-dropdown .dropdown-submenu > a').on("click", function (e) {
+                        var submenu = $(this);
+                        $('.multi-level-dropdown .dropdown-submenu .dropdown-menu').removeClass('show');
+                        submenu.next('.dropdown-menu').addClass('show');
+                        e.stopPropagation();
+                    });
+                    $('.multi-level-dropdown .dropdown').on("hidden.bs.dropdown", function () {
+                        // hide any open menus when parent closes
+                        $('.multi-level-dropdown .dropdown-menu.show').removeClass('show');
+                    });
+
+
+
+
+                    function bookSAppointment(authority) {
+                        $("#txtDetails").val("");
+                        $("#MobNo").val("");
+                        $("#ddlRelation").val("");
+                        $("#refno").val(authority);
+                        var ath = $("#refno").val();
+
+                        if (authority != 'MNT') {
+                            $("#rmsmsg").hide();
+                        }
+                        else {
+                            $("#rmsmsg").show();
+                        }
+
+
+                        $.ajax({
+                            type: "POST",
+                            contentType: "application/json; charset=utf-8",
+                            url: "StudentDashboard.aspx/GetPendingAppointments",
+                            data: JSON.stringify({ "AuthCode": ath }),
+                            dataType: "json",
+                            success: function (data) {
+                                data = data.d;
+                                if (data == "NA") {
+                                    $("#PendingRequests").html("");
+                                    $("#PendingRequests").hide();
+                                    $("#ContentData").show();
+                                    $("#PendingRequests").append(data);
+                                }
+                                else {
+                                    $("#PendingRequests").html("");
+                                    $("#PendingRequests").show();
+                                    $("#ContentData").hide();
+                                    $("#PendingRequests").append(data);
+                                }
+
+                                if (roll.toString() == "3") {
+                                    $("#divddlRelation").hide();
+                                }
+                            },
+                            error: function (result) {
+                                /// swal("Ooops!", "Error Occured. Kindly try again Later!", "error");
+                                //$.unblockUI();
+                            }
+                        });
+                    }
+
+                    function SaveAppointment() {
+                        var ath = $("#refno").val();
+                        var Details = $("#txtDetails").val();
+                        var MobNumber = $("#MobNo").val();
+                        var PrentType = $("#ddlRelation").val();
+                        var ok = "OK";
+
+                        var roll = '3';
+                        if (roll != "3") {
+                            if (Details.length == 0 || MobNumber.length == 0 || PrentType.length == 0) {
+                                ok = "NA";
+                            }
+                        }
+                        else {
+                            if (Details.length == 0 || $("#MobNo").val().length == 0) {
+                                ok = "NA";
+                            }
+                        }
+
+                        if (ok == "OK") {
+
+                            $.ajax({
+                                type: "POST",
+                                contentType: "application/json; charset=utf-8",
+                                url: "StudentDashboard.aspx/BookAppointment",
+                                data: JSON.stringify({ "AuthCode": ath, "msg": Details, "Mobno": MobNumber, "parentType": PrentType }),
+                                dataType: "json",
+                                success: function (data) {
+                                    data = data.d;
+                                    if (data == "Success. Appointment request Sent.") {
+                                        swal("Success!", "Success. Appointment request Sent!", "success");
+                                        $("#txtDetails").val("");
+                                        $("#MobNo").val("");
+                                        $("#ddlRelation").val("");
+
+                                    }
+                                    else {
+                                        swal("Ooops!", "Error Occured. Kindly try again Later!", "error");
+                                    }
+                                    //console.log(data);
+                                },
+                                error: function (result) {
+                                    swal("Ooops!", "Error Occured. Kindly try again Later!", "error");
+                                    //$.unblockUI();
+                                }
+
+
+                            });
+
+                            getpendingreq();
+
+                        }
+                        else {
+                            swal("Ooops!", "All Fields are Required !", "error");
+                        }
+
+                    }
+
+
+                    //function GetTextForDisplayonTop() {
+                    //    var owl = $('#top-marquee').owlCarousel({
+                    //        items: 1,
+                    //        loop: true,
+                    //        autoplay: 5000,
+                    //        autoplaySpeed: 800,
+                    //        autoplayHoverPause: true,
+                    //        mouseDrag: true,
+                    //        touchDrag: true,
+                    //        nav: false,
+                    //        pagination: false,
+                    //        dots: true
+                    //    });
+
+                    //    $.ajax({
+                    //        type: "GET",
+                    //        url: '@Url.Action("GetTextForDisplayDashBoard", "Login")',
+                    //        contentType: "application/json; charset=utf-8",
+                    //        success: function (data) {
+                    //            if (data.status === false) {
+                    //                console.log("error in headermarquee details ");
+                    //                //swal("Text Display ", data.message, "error");
+                    //                return;
+                    //            }
+                    //            else {
+                    //                //  console.log(data.data.DisplayTextList);
+                    //                var html = '';
+                    //                $.each(data.data.DisplayTextList, function (i, item) {
+                    //                    owl.trigger('add.owl.carousel', [jQuery(' <div prior="' + item.Priority + '" hexCode="' + item.colorCode + '"> <i class="fa fa-bullhorn"></i> "' + item.Msg + '"</div>')]);
+
+                    //                });
+                    //                owl.on('changed.owl.carousel', function (e) {
+
+                    //                    var current = e.item.index;
+                    //                    var hex_code = $(e.target).find(".owl-item").eq(current).find('div').attr('hexCode');
+                    //                    var priority = $(e.target).find(".owl-item").eq(current).find('div').attr('prior');
+
+                    //                    if (priority == "Medium") {
+                    //                        $("#top-marquee").parent().css('color', 'black');
+                    //                        $("#top-marquee").parent().css('background-color', '#abe7ed');
+                    //                    }
+                    //                    else if (priority == "Low") {
+                    //                        $("#top-marquee").parent().css('color', 'black');
+                    //                        $("#top-marquee").parent().css('background-color', '#f9e491');
+
+                    //                    }
+                    //                    else {
+                    //                        $("#top-marquee").parent().css('color', 'black');
+                    //                        $("#top-marquee").parent().css('background-color', '#fbe1e3');
+                    //                    }
+
+                    //                })
+                    //                owl.trigger('refresh.owl.carousel');
+                    //            }
+
+                    //        },
+                    //        error: function (response) {
+                    //            // swal(String(response.status), this.url + ' :: ' + response.statusText, "error");
+                    //        }
+                    //    });
+
+                    //} 
+
+
+                    function getWhatsappno() {
+
+
+                        //$("#mdcontent").html("");
+                        $.ajax({
+                            type: "POST",
+                            contentType: "application/json; charset=utf-8",
+                            url: "StudentDashboard.aspx/GetStudentContactNo",
+                            data: JSON.stringify({}),
+                            dataType: "json",
+                            success: function (data) {
+
+                                if (data.d.includes(":0")) {
+
+                                    $('#mdlWhatsappVerifyNo').modal('show');
+                                    var dd = data.d.replace(":0", "");
+                                    $("#WhatAppNo").html(dd);
+
+
+                                }
+                                if (data.d.includes(":1")) {
+                                    var dd = data.d.replace(":1", "");
+                                    $("#WhatAppNo").html(dd);
+                                }
+                                if (data.d == "NA") {
+
+                                    $("#WhatAppNo").html(data.d);
+                                }
+                            },
+                            error: function (result) {
+                                swal("Ooops!", "Error Occured. Kindly try again Later!", "error");
+                                //$.unblockUI();
+                            }
+                        });
+                    }
+
+
+                    function SaveWhatsAppPref() {
+
+                        var category = $('input[name="rdWhatsappVerify"]:checked').val();
+                        var Alternate = $("#txtAlternateNo").val();
+
+                        $.ajax({
+                            type: "POST",
+                            contentType: "application/json; charset=utf-8",
+                            url: "StudentDashboard.aspx/SaveWhatsAppPrefDetails",
+                            data: JSON.stringify({ "AuthCode": category, "AlterateContact": Alternate }),
+                            dataType: "json",
+                            success: function (data) {
+                                data = data.d;
+                                if (data == "Success") {
+                                    swal("Success!", "Success. Preference Updated Successfully!", "success");
+
+
+                                }
+                                else {
+                                    swal("Ooops!", "Error Occured. Kindly try again Later!", "error");
+                                }
+                                //console.log(data);
+                            },
+                            error: function (result) {
+                                swal("Ooops!", "Error Occured. Kindly try again Later!", "error");
+                                //$.unblockUI();
+                            }
+
+
+                        });
+
+
+                    }
+
+
+                </script>
+            </div>
+        </main>
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <p class="mb-0 text-muted"><a href="https://www.lpu.in/" target="_blank"
+                                    style="margin-bottom: 10px;">Lovely Professional University 2020</a></p>
+                        </div>
+                        <div class="col-sm-6 d-none d-sm-block">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript">
+            //<![CDATA[
+            Sys.Application.add_init(function () {
+                $create(Telerik.Web.UI.RadToolTip, { "_cssClass": "", "_manualCloseButtonText": "Close", "clientStateFieldID": "ctl00_wcUserPasswordDetail_HP_informationToolTip_ClientState", "formID": "aspnetForm", "hideEvent": 16, "modal": true, "position": 22, "showEvent": 16, "skin": "Default", "title": "Important Information for you" }, null, null, $get("ctl00_wcUserPasswordDetail_HP_informationToolTip"));
+            });
+//]]>
+        </script>
+    </form>
+    <script type="text/javascript" src="dashboard/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="dashboard/js/dore.script.js"></script>
+    <script type="text/javascript" src="dashboard/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="dashboard/js/perfect-scrollbar.min.js"></script>
+    <script type="text/javascript" src="dashboard/js/scripts.js"></script>
+    <script type="text/javascript" src="dashboard/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="dashboard/js/DashboardDetails.js"></script>
+    <script src="js1/sweetalert.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="Dashboard/bootstrap-toastr/toastr.min.js"></script>
+    <script type="text/javascript">
+            //(function (i, s, o, g, r, a, m) {
+            //                   i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            //                       (i[r].q = i[r].q || []).push(arguments)
+            //                   }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            //                       m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            //               })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            //               ga('create', 'UA-67701680-1', 'auto');
+            //               ga('send', 'pageview');
+    </script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            localStorage.clear();
+            BindSAutoCompleteSearch();
+            sessionStorage.clear();
+            GetMenuList();
+            loadquicklinks();
+
+        });
+
+        $('.ums-toogle-menu').on('click', function () {
+            $('.ums-nav').toggleClass('mmenu-open');
+            if ($('.ums-nav').hasClass('mmenu-open')) {
+                $('#top-search-trigger').css('margin-top', '-134px')
+
+            }
+            else {
+                $('#top-search-trigger').css('margin-top', '-50px')
+            }
+        });
+
+
+        function funtrigger(e) {
+            $("body").toggleClass('top-search-open');
+            $(".dropdbmenu").addClass('dropsmenu');
+        }
+        function funtriggerClose(e) {
+            $("body").toggleClass('top-search-open');
+            $(".dropdbmenu").removeClass('dropsmenu');
+        }
+        $(document).scroll(function () {
+            var windowSize = $(window).width();
+            if (windowSize >= 480) {
+                //var y = $(this).scrollTop();
+                //if (y > 10) {
+                //    $('.ums-menu').addClass('ums-fixed-top');
+                //}
+                //else {
+                //    $('.ums-menu').removeClass('ums-fixed-top');
+                //}
+            }
+
+        });
+
+        function GetMenuList() {
+
+            if (localStorage.getItem('LoginMenu') == null || localStorage.getItem('LoginMenu') == undefined) {
+                $.ajax({
+                    type: "Post",
+                    contentType: "application/json; charset=utf-8",
+                    //url: '@Url.Action("GetMenuList", "Login")',
+                    url: "StudentDashboard.aspx/GetMenuList",
+                    dataType: "json",
+                    success: function (data) {
+                        //App.unblockUI();
+                        //console.log(data.d[1].Value);
+
+                        if (data.d[1].Value == false) {
+
+                            $('#dverror').slideDown();
+                            $('#spnerrorMessage').text('Invalid Username');
+
+                        }
+                        else {
+
+                        }
+
+                    },
+                    error: function (result) {
+                        //App.unblockUI();
+                    },
+                    complete: function (data) {
+
+                        var stringified = JSON.stringify(data);
+                        var parsedObj = JSON.parse(stringified);
+
+                        for (var key in parsedObj) {
+                            //console.log(key, parsedObj[key]);                        
+                        }
+                        //console.log(parsedObj.responseJSON.d[0].Value);
+                        //localStorage.setItem('LoginMenu', JSON.stringify(data.d[0].Value));
+                        localStorage.setItem('LoginMenu', JSON.stringify(parsedObj.responseJSON.d[0].Value.MenuList));
+                        bindMenuList(JSON.parse(localStorage.getItem('LoginMenu')));
+                    }
+                });
+            }
+            else {
+
+                bindMenuList(JSON.parse(localStorage.getItem('LoginMenu')));
+            }
+
+            //password expire check
+            //alertPasswordChange();
+
+        }
+
+        function bindMenuList(MenuArray) {
+            //var MainMenuList = $('#dvMainMenuContent');
+            var Academics = $('#Academics');
+            var Administrative = $('#Administrative');
+            var ImportantLinks = $('#ImportantLinks');
+            var StudentServices = $('#StudentServices');
+
+            //MainMenuList.html('');
+            Academics.html('');
+            Administrative.html('');
+            ImportantLinks.html('');
+            StudentServices.html('');
+
+            //$.each(MenuArray, function (i, item) {
+            //    if ($.inArray(item.Parent, ParentList) == -1) {
+            //        ParentList.push(item.Parent)
+            //    }
+            //});
+
+            bindMenuCategory("Academics");
+            bindMenuCategory("Administrative");
+            bindMenuCategory("Important Links");
+            bindMenuCategory("Student Services");
+
+            function bindMenuCategory(CategoryType) {
+                var html = '';
+                var dataArray = [];
+
+                $.each(MenuArray.filter(z => z.NewParentMenu == CategoryType), function (i, Index) {
+                    $('#hdSearchVal').val(Index.NavigationUrl);
+
+                    if ($.inArray(Index.Parent, dataArray) == -1) {
+                        dataArray.push(Index.Parent);
+                    }
+                });
+
+
+                $.each(dataArray, function (i, item) {
+                    html += " <div class='menu-content'>";
+                    html += "<h3>" + item + "</h3>";
+                    html += "<ul class='mega-menu-submenu'>";
+                    $.each(MenuArray.filter(z => z.NewParentMenu == CategoryType && z.Parent == item), function (i, Index) {
+                        //html += "<li> <a onclick='SendOnURl(`" + Index.NavigationUrl + "`,`" + Index.NavigationName + "`);'> " + Index.Name + " </a></li>";
+                        html += "<li> <a href='" + Index.NavigationUrl + "'>" + Index.Name + " </a></li>";
+
+                    });
+                    html += " </ul>";
+                    html += " </div>";
+                });
+
+                if (CategoryType == "Academics") { Academics.html(html); }
+                if (CategoryType == "Administrative") { Administrative.html(html); }
+                if (CategoryType == "Important Links") { ImportantLinks.html(html); }
+                if (CategoryType == "Student Services") { StudentServices.html(html); }
+
+            }
+
+
+        }
+
+        //function MakeURLForSend() {
+        //    var DataRow = [];
+        //    DataRow = SearchListeAutoComplete.filter(x => x.MenuId == $('#hdSearchVal').val())
+        //    SendOnURl(DataRow[0]["NavigationUrl"], DataRow[0]["NavigationName"]);
+        //}
+
+        //function SendOnURl(Url, UrlName) {
+        //    $.ajax({
+        //        type: "POST",
+        //        contentType: "application/json; charset=utf-8",
+        //        //url: "@Url.Action("EncryptData", "Home")",
+        //        data: JSON.stringify({ PageName: UrlName }),
+        //        success: function (response) {
+
+        //            $.each((response), function (i, vals) {
+        //                $.each((vals), function (j, result) {
+        //                    window.open(Url + '?LoginId=' + result.LoginId + '&PageView=' + result.PageName);
+
+        //                });
+        //            });
+
+        //        },
+        //        complete: function () { },
+        //        error: function (result) {
+        //            console.log("error");
+        //        },
+        //    });
+        //}
+
+
+        $('.searchmenu').keyup(function () {
+            filterr();
+        });
+
+        function filterr() {
+            var filter = $('.searchmenu').val().toLowerCase();
+            $('.menuclass').each(function () {
+                if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                    $(this).fadeOut();
+                }
+                else {
+                    $(this).fadeIn();
+                }
+            });
+        }
+
+        //function funBindurl(elem) {
+        //    var pview = $(elem).data('nav');
+        //    var murl = $(elem).data('navurl');
+        //    SendOnURl(murl, pview);
+        //    $('#idopt').prop('selectedIndex', 0);
+        //}
+
+
+        var SearchListeAutoComplete;
+        var checkquicklink = [];
+        var checkquicklink2 = [];
+
+
+        function BindSAutoCompleteSearch() {
+
+            var parsedJson = [];
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                //url: '@Url.Action("GetMenuListForSearch", "Login")',
+                url: "StudentDashboard.aspx/GetMenuListForSearch",
+                success: function (data) {
+
+                    var stringified = JSON.stringify(data.d[0]);
+                    var parsedObj = JSON.parse(stringified);
+
+                    //for (var key in parsedObj) {
+                    //    console.log(key, parsedObj[key]);
+                    //}
+
+                    //var DataList = data.d[0].data.MenuForSearch;
+                    var DataList = parsedObj["Value"].MenuForSearch;
+                    checkquicklink2.push(DataList);
+                    //SearchListeAutoComplete = data.data.MenuForSearch;
+                    SearchListeAutoComplete = parsedObj["Value"].MenuForSearch;
+                    var ParentList = [];
+                    $.each(DataList, function (i, item) {
+                        if ($.inArray(item.Parent, ParentList) == -1) {
+                            ParentList.push(item.Parent)
+                        }
+                    })
+
+                    var Menucount = 0;
+                    var Submenucount = 0;
+
+                    $.each(ParentList, function (i, item) {
+                        $("#idopt").append('<li class="menuclass menu-div"  id="z_' + Menucount + '"><h4>' + item + '</h4></li>');
+
+
+                        $.each(DataList, function (j, d2) {
+                            //(item == d2.Parent) ? $("#z_" + Submenucount).append('<div class="col-md-4 pl0 menuclass"><a class="" style="text-decoration:none" target="_blank" data-nav="' + d2.NavigationName + '" data-navurl="' + d2.NavigationUrl + '" onclick="funBindurl(this)">' + d2.MenuList + '</a>\
+                            (item == d2.Parent) ? $("#idopt").append('<li class="pl0 menuclass"><a class="" style="text-decoration:none" target="_blank" data-nav="' + d2.NavigationName + '" data-navurl="' + d2.NavigationUrl + '" href="' + d2.NavigationUrl + '">' + d2.MenuList + '</a>\
+                        <div class="input-group" style="padding-top: 3px;"><div class="icheck-list"><label class="">\
+                        <div class="icheckbox_flat-grey"  title="Add to quick links" data-type="fromcheck" data-mid="' + d2.MenuId + '" id="' + d2.MenuId + '" data-par="' + item + '" data-nav="' + d2.NavigationName + '" data-navurl="' + d2.NavigationUrl + '" data-subname="' + d2.MenuList + '" onclick="funquicklink(this)" style="position: relative;margin-bottom:2px;"></div>\
+                        </label></div></div></li>') : "";
+                        });
+
+                        Menucount++;
+                        Submenucount++;
+
+                    });
+
+                },
+                complete: function (data) {
+                    //to get checkbox status for quicklink
+                    $.ajax({
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        url: "StudentDashboard.aspx/Getquicklinks",
+                        success: function (result) {
+                            checkquicklink.length = 0;
+                            $.each(result, function (i, de) {
+                                $.each(de, function (i, value) {
+                                    checkquicklink.push(value);
+                                });
+                            });
+
+                            $.each(checkquicklink, function (i, d1) {
+                                $.each(checkquicklink2, function (j, item) {
+                                    $.each(item, function (j, d2) {
+                                        if (d2.MenuId == d1.mid) {
+                                            $("#" + d2.MenuId).addClass('checked');
+                                        }
+                                    });
+
+                                });
+                            });
+                        }
+                    });
+
+                }
+
+            });
+        }
+
+        function fundisplaymenu() {
+            $('#idopt').css('display', 'block');
+        }
+        $(document).on("mouseleave", "#idopt", function (e) {
+            //$("#idopt").css("display", "none");
+            $("#idopt").css("display", "block");
+        });
+
+        function funquicklink(elem) {
+            $(elem).toggleClass('checked');
+            var menuid = $(elem).data('mid');
+            var nav = $(elem).data('nav');
+            var navurl = $(elem).data('navurl');
+            var menuname = $(elem).data('subname');
+            //console.log(menuid);
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "StudentDashboard.aspx/QuickLink",
+                data: JSON.stringify({ "menusid": menuid }),
+                dataType: "json",
+                success: function (result) {
+                    var nurl = $('#hdSearchVal').val();
+                    if ($(elem).hasClass('checked')) {
+
+                        if ($("#idinfo").length != 0) {
+                            $('#quickli').html('');
+                        }
+                        $.each(result, function (i, de) {
+                            $.each(de, function (i, value) {
+                                console.log(value);
+                                //$('#quickli').append('<div class="col-md-12 qdiv mb10"><div class="col-xs-10" data-nav="' + value.NavigationUrl + '" data-navurl="' + nurl + '"  onclick="funBindurl(this)">' + value.menuname + '</div><div id="qdelete" data-subname="' + value.menuname + '" data-mid="' + value.mid + '"  class="col-xs-2 text-center" onclick="removequicklink(this)"><i class="fa fa-close"></i></div></div>');
+                                $('#quickli').append('<div class="col-md-12 qdiv mb10"><a class="col-xs-10" target="_blank data-nav="' + value.nl + '" data-navurl="' + nurl + '" href="' + value.nl + '">' + value.menuname + '</a><div id="qdelete" data-subname="' + value.menuname + '" data-mid="' + value.mid + '"  class="col-xs-2 text-center" onclick="removequicklink(this)"><i class="fa fa-close"></i></div></div>');
+
+                            });
+                        });
+                        toastr.success('Successfully added to quick links.', menuname);
+                        loadquicklinks();
+                    }
+                    else {
+                        removequicklink(elem);
+                    }
+                }
+            });
+
+        }
+
+        function loadquicklinks() {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "StudentDashboard.aspx/Getquicklinks",
+                success: function (data) {
+                    var nurl = $('#hdSearchVal').val();
+                    //var hasitem = data.result.length;
+                    var hasitem = data.d.length;
+                    if (hasitem > 0) {
+                        $("#quickli").html("");
+                        $.each(data, function (i, de) {
+                            $.each(de, function (i, value) {
+                                //console.log(value);
+                                //$('#quickli').append('<div class="col-md-12 qdiv mb10"><div class="col-xs-10" data-nav="' + value.NavigationUrl + '" data-navurl="' + nurl + '"  onclick="funBindurl(this)">' + value.menuname + '</div><div id="qdelete" data-subname="' + value.menuname + '" data-mid="' + value.mid + '"  class="col-xs-2 text-center" onclick="removequicklink(this)"><i class="fa fa-close"></i></div></div>');
+                                $('#quickli').append('<div class="col-md-12 qdiv mb10"><a class="col-xs-10" target="_blank data-nav="' + value.nl + '" data-navurl="' + nurl + '"  href="' + value.nl + '">' + value.menuname + '</a><div id="qdelete" data-subname="' + value.menuname + '" data-mid="' + value.mid + '"  class="col-xs-2 text-center" onclick="removequicklink(this)"><i class="fa fa-close"></i></div></div>');
+                            });
+                        });
+                    }
+                    else {
+                        $("#quickli").html('<div class="text-center" id="idinfo" style="margin-top:100px"><b>No quick link available.<br />Go to search menu to add quick link.</b></div>');
+                    }
+                }
+            });
+        }
+
+        function removequicklink(elem) {
+            var menuid = $(elem).data('mid');
+            var menuname = $(elem).data('subname');
+            var check = $(elem).data('type');
+
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "StudentDashboard.aspx/Deletequicklink",
+                data: JSON.stringify({ "mid": menuid }),
+                dataType: "json",
+                success: function (result) {
+                    toastr.error('Removed from quick links.', menuname);
+                    loadquicklinks();
+                    if (check == "fromcheck") {
+
+                    } else {
+                        $('#idopt').html('');
+                        BindSAutoCompleteSearch();
+
+
+                    }
+                },
+                complete: function () {
+                }
+            });
+
+        }
+
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "positionClass": "toast-bottom-right",
+            "onclick": null,
+            "showDuration": "1000",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut",
+        }
+
+    </script>
+    <script type="text/javascript">
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        prm.add_initializeRequest(InitializeRequest);
+        function InitializeRequest(sender, args) {
+            if (prm.get_isInAsyncPostBack()) {
+                args.set_cancel(true);
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        var clearInt;
+        var totalMessages = 0;
+        var listofConfimationIDs = [];
+        // clearInt = setInterval(displayDialog, 5000);
+
+
+
+        function getUpdatedMessages() {
+            totalMessages = 0;
+            $('#divMessage').empty();
+            var UserID = '12103196';
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "WsEmployeeSearch.asmx/MessageDetails",
+                data: JSON.stringify({ EmpCode: UserID }),
+                dataType: "json",
+                success: function (data) {
+                    data = data.d;
+                    $('#hrdMaximunTime').val('0');
+                    var atttable = "<table  class='at-table' ><tbody>";
+
+                    var row = "";
+                    for (var i = 0; i < data.length; i++) {
+                        totalMessages += 1;
+                        $('#hrdMaximunTime').val(data[i].RepeatMessageAfterMiliSecond);
+                        listofConfimationIDs.push(data[i].ID);
+                        row = '<tr>';
+                        row += '<td style="vertical-align:top">' + data[i].SrNo + '</td>';
+                        row += '<td style="vertical-align:top">' + data[i].Description + '</td>';
+                        row += '</tr>';
+                        atttable += row;
+                    }
+
+                    atttable += '</tbody></table>';
+                    $('#divMessage').html(atttable);
+
+                    if ($('#hrdMaximunTime').val() > 0) {
+                        // displayDialog();
+                        clearInt = setInterval(displayDialog, $('#hrdMaximunTime').val());
+                    }
+                    else if (data.length > 0) {
+                        displayDialog();
+                    }
+                    else {
+
+                    }
+                }
+                ,
+                error: function (result) {
+                    //alert("Error");
+                }
+            });
+        }
+
+        function displayDialog() {
+            clearInterval(clearInt);
+            if ($('#hrdIsUMSBlocked').val() == 'Yes')
+                $('#divUMSBlock').show('fast');
+            else
+                $('#divUMSBlock').hide('fast');
+
+            $("#divTesting").dialog
+                ({
+                    title: "Important Information for you ",
+                    width: 750,
+                    resizable: false,
+                    modal: true,
+                    closeOnEscape: false,
+                    dialogClass: 'no-close',
+                    draggable: false,
+                });
+
+            //$('#divTesting').prev('div').css({ 'color': 'white', 'background-color': 'red' });
+            var height = $('#divTesting').css('height');            //$('#ui-id-5').next('a').hide();
+
+            //height = height.substr(0, height.length - 2);
+
+            //if (height > 400) {
+            //    $('#divTesting').parent('div').css({ 'margin-top': '0px' });
+            //}
+            //else if (height > 300) {
+            //    $('#divTesting').parent('div').css({ 'margin-top': '0px' });
+            //}
+            //else if (height > 200) {
+            //    $('#divTesting').parent('div').css({ 'margin-top': '40px' });
+            //}
+            //else if (height > 150) {
+            //    $('#divTesting').parent('div').css({ 'margin-top': '60px' });
+            //}
+            //else if (height > 125) {
+            //    $('#divTesting').parent('div').css({ 'margin-top': '80px' });
+            //}
+
+            //else if (height > 100) {
+            //    $('#divTesting').parent('div').css({ 'margin-top': '100px' });
+            //}
+
+            //else {
+            //    $('#divTesting').parent('div').css({ 'margin-top': '150px' });
+            //}
+        }
+
+
+
+        $(document).ready(function () {
+            $('#btnClose').attr('disabled', 'disabled');
+            $('#divUMSBlock').hide('fast');
+
+            $('#divTesting').hide();
+            var EmpCode = '12103196';
+
+            $('#divMessage').empty();
+            var UserID = '';
+            UserID = UserID + '12103196';
+
+            $('a.menu-button').click(function () {
+                $(this).find('i').toggleClass('fa-chevron-left fa-chevron-right')
+            });
+
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "WsEmployeeSearch.asmx/MessageDetails",
+                data: JSON.stringify({ EmpCode: UserID }),
+                dataType: "json",
+                success: function (data) {
+                    data = data.d;
+                    $('#hrdMaximunTime').val('0');
+                    var atttable = "<table  class='at-table' ><tbody>";
+
+                    var row = "";
+                    for (var i = 0; i < data.length; i++) {
+                        totalMessages += 1;
+
+                        if (data[i].IsBlocked == 'True') {
+                            $('#hrdIsUMSBlocked').val('Yes');
+
+                            $('#hrdMaximunTime').val(data[i].RepeatMessageAfterMiliSecond);
+                            listofConfimationIDs.push(data[i].ID);
+                            row = '<tr style="font-weight:bold">';
+                            row += '<td style="vertical-align:top">' + data[i].SrNo + '</td>';
+                            row += '<td style="vertical-align:top" >' + data[i].Description + '</td>';
+                            //row += '<td style="vertical-align:top" >' + data[i].IsBlocked + '</td>';
+                            row += '</tr>';
+                            atttable += row;
+                        }
+                        else {
+
+
+                            $('#hrdMaximunTime').val(data[i].RepeatMessageAfterMiliSecond);
+                            listofConfimationIDs.push(data[i].ID);
+                            row = '<tr>';
+                            row += '<td style="vertical-align:top">' + data[i].SrNo + '</td>';
+                            row += '<td style="vertical-align:top" >' + data[i].Description + '</td>';
+                            //row += '<td style="vertical-align:top" >' + data[i].IsBlocked + '</td>';
+                            row += '</tr>';
+                            atttable += row;
+                        }
+                    }
+
+                    atttable += '</tbody></table>';
+                    $('#divMessage').html(atttable);
+
+
+                    if (totalMessages > 0) {
+                        displayDialog();
+                    } else {
+                        //ps_SetupPollsContainer('#psTabPollContainer');
+                    }
+                }
+                ,
+                error: function (result) {
+                    //alert("Error");
+                }
+            });
+
+
+            $('#btnClose').click(function () {
+
+                var userID = '12103196';
+                var ID = "";
+
+                for (i = 0; i < listofConfimationIDs.length; i++) {
+                    ID = listofConfimationIDs[i];
+                    $.ajax({
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        url: "WsEmployeeSearch.asmx/UpdateMessageDetails",
+                        data: JSON.stringify({ Id: ID, EmpCode: userID }),
+                        dataType: "json",
+                        success: function (data) {
+
+                        }
+                    });
+                }
+
+
+
+                $('#btnClose').removeClass('enableClosedialog');
+                $('#btnClose').addClass('disableClosedialog');
+                $("#chkReadMessage").attr('checked', false);
+                //$('#btnClose').attr('disabled', 'disabled');
+                $("#divTesting").dialog('close');
+                /// ps_SetupPollsContainer('#psTabPollContainer');
+
+                if ($('#hrdIsUMSBlocked').val() == 'Yes') {
+
+
+                    window.location.replace('https://ums.lpu.in/lpuums/loginnew.aspx');
+
+                }
+                else {
+                    getUpdatedMessages();
+                }
+            });
+
+
+            $('#chkReadMessage').click(function () {
+                if ($(this).is(':checked')) {
+                    $('#btnClose').removeAttr('disabled');
+                    $('#btnClose').removeClass('disableClosedialog');
+                    $('#btnClose').addClass('enableClosedialog');
+                }
+                else {
+                    $('#btnClose').attr('disabled', 'disabled');
+                    $('#btnClose').removeClass('enableClosedialog');
+                    $('#btnClose').addClass('disableClosedialog');
+                }
+            });
+        });
+
+
+
+    </script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+        integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+        data-cf-beacon='{"rayId":"750bbbdb7cdea3e9","token":"c5db119ec2de4adc8b8b1d95388884a3","version":"2022.8.1","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

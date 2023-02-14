@@ -29,7 +29,7 @@ function Takebook() {
             }
 
             try {
-                const { data } = await axios.get("https://got-it-in.herokuapp.com/take/book", config);
+                const { data } = await axios.get("http://18.237.33.67:5500/take/book", config);
                 console.log(data);
                 setBooks(data);
 
@@ -61,7 +61,7 @@ function Takebook() {
                         console.log(book.image);
                         return <div className="col-sm-4">
                             <div className="card " key={index}>
-                                <img src={`https://got-it-in.herokuapp.com/${book.image}`} className="card-img-top" alt="..." />
+                                <img src={`http://18.237.33.67:5500/${book.image}`} className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Book name:{book.name}</h5>
                                     <p className="card-text">Publisher:{book.publisher}</p>

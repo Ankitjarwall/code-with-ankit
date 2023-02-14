@@ -1,934 +1,171 @@
-</script>
-<style type="text/css">
- #trStartWith select option {
-          font-size: 14px;
-      }
-      .countdown
-      {
-          background: rgba(224,74,49,0.70);
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
-          border-radius: 5px;
-          float: right;
-          margin-right: 15px;
-          padding: 5px;
-          position: absolute;
-          right: 0;
-          top: 10px;
-          width: 320px;
-      }
-      .countdown strong
-      {
-          position: absolute;
-          top: 20px;
-          width: 143px;
-          right: 10px;
-      }
-      .countdown b
-      {
-          font-size: 25px;
-      }
-      .clock_countdown
-      {
-          color: #fff;
-          font-size: 15px;
-          font-family: "segoe_uilight";
-      }
-      .clock
-      {
-          margin: 0 auto;
-          width: 60%;
-          display: block;
-          background-color: #fff;
-          color: #000;
-          -webkit-border-radius: 2px;
-          -moz-border-radius: 2px;
-          border-radius: 2px;
-      }
-</style>
-<script>
- (function(i, s, o, g, r, a, m) {
-          i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
-              (i[r].q = i[r].q || []).push(arguments)
-          }, i[r].l = 1 * new Date(); a = s.createElement(o),
-m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+<html>
 
-      ga('create', 'UA-67701680-1', 'auto');
-      ga('send', 'pageview');
-</script>
-<link href="/LpuUms/WebResource.axd?d=hcXDZhXiidgsQUtEo5iT30fH_dTYDJUgFegb7-OjNfbaQmVWpu3cDkxUMKjwNiV26XKE3ffGhHaDWe8_gl82smMyhxAn_O3W9R8ngAK4TWN8JwnOGFVpG-GuPuE707yFoErQccaLd8iNQTYtTb09Ca2vudHGD-czGQaFG1p9q4k1&amp;t=637887782476268860" rel="stylesheet" type="text/css"/>
-<script async="" src="/cdn-cgi/challenge-platform/h/b/scripts/invisible.js?ts=1656864000">
-</script>
+<head>
+    <title>Distance Matrix Service</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- playground-hide -->
+    <script>
+        const process = { env: {} };
+        process.env.GOOGLE_MAPS_API_KEY =
+            "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
+    </script>
+    <!-- playground-hide-end -->
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            height: 100%;
+            display: flex;
+        }
+
+        #sidebar {
+            flex-basis: 15rem;
+            flex-grow: 1;
+            padding: 1rem;
+            max-width: 30rem;
+            height: 100%;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+        #map {
+            flex-basis: 0;
+            flex-grow: 4;
+            height: 100%;
+        }
+
+        #sidebar {
+            flex-direction: column;
+        }
+    </style>
 </head>
+
 <body>
-<form action="./LoginNew.aspx" id="form1" method="post">
- <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
- <script src="/LpuUms/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmZx_1_fm7JieTmbHikZ_IID5YFFXXx4Y5TVWWxnZYePVG01HMyeQrv_eqkyIve_3CJITJGGiJcwwpXUzVpAHH9lZ0cCcmnAdKXPGGv1oGewqtMg14J95AhAczUQ9fESt1coiswLTzmG-pWLLunnpVg1&amp;t=ffffffffe6d5a9ac" type="text/javascript">
- </script>
- <script src="/LpuUms/ScriptResource.axd?d=eE6V8nDbUVn0gtG6hKNX_OlMFiZiXB5Cm3m8XUXnnx6sPpd99Nu_I6zK9DhbOY_sVyln5nxH7EKoDGO_2HA3gFaVnWuULucy50e6N1nLZoV6YxTwE4EQT8sScRGeRbxF0&amp;t=2009a88" type="text/javascript">
- </script>
- <script src="/LpuUms/ScriptResource.axd?d=mcAASOSteirJeuV-3by3UTfcvyqMfpHQQvPE8LgNR_uSVyhN4nIp_5hGBpmO2G0Po__GBTZKoERwEgQAA01YK6uQXi_XHAfhjS50dfwG20M1&amp;t=2009a88" type="text/javascript">
- </script>
- <script src="/LpuUms/ScriptResource.axd?d=jwf4VSQi7LeShc44FJ-gAUUPwefKCK-OY8MikdsGKAGg5B3BRN6c6qAPnC1RKjgK0YFLUZ6SiXwGOIpzFPaKDLFFZpmbNkkeu-xomLSyj3fIqvEGm13gK2HAj0Ymn9cy0&amp;t=2009a88" type="text/javascript">
- </script>
- <script src="/LpuUms/ScriptResource.axd?d=HEFpVKbnoeQjkjHkFKu3MGO5pl2H_zlQeDqnwQ9s1PK8985t-ElB7fhXw8qaNn8gOOdRq413VVtzbMx-JRj5f-rYsr3XzRJcjNanKEaPl-GADcu2uv9xcN9mPNVaafHy0&amp;t=2009a88" type="text/javascript">
- </script>
- <script src="/LpuUms/ScriptResource.axd?d=V9BZfzKzDCsxAStwHbjCaP5zPBE7mXP39XFCTH6gQpm5Y3rGjulgVYSvOzQp2WTZYYjuE7ckS9uZyg6XtNWE5se_j8tufTq0KTUEJ0PAS9dSJYecB1fYB8j8zViDy7Ge0&amp;t=2009a88" type="text/javascript">
- </script>
- <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="DD46A77E"/>
- <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="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"/>
- <div class="main_div_mid">
-  <div class="main_div_left">
-   <div class="lpu_logo">
-    <img alt="LPU" height="140" src="login_images/lpu_logo.png" width="140"/>
-   </div>
-   <div class="ums_logo">
-    <img alt="ums" height="47" src="login_images/ums_logo.png" width="383"/>
-   </div>
-  </div>
-  <div class="login_box">
-   <div class="red_box">
-   </div>
-   <div class="sign_in">
-    Sign In
-   </div>
-   <div class="table">
-    <div id="UpdatePanel1">
-     <table align="center" border="0" cellpadding="0" cellspacing="30" class="login_tbl" width="100%">
-      <tr>
-       <td class="auto-style1">
-        <input class="input_type" id="txtU" name="txtU" placeholder="User ID" type="text"/>
-       </td>
-       <td class="auto-style1">
-        <input class="input_type_pass" id="TxtpwdAutoId_8767" name="TxtpwdAutoId_8767" placeholder="Password" type="password"/>
-       </td>
-      </tr>
-      <tr>
-       <td>
-        <select class="select_ums" id="DropDownList1" name="DropDownList1">
-         <option selected="selected" value="1">
-          HeadOffice
-         </option>
-         <option value="2">
-          Ambedkar Chowk
-         </option>
-         <option value="19">
-          Bhutan
-         </option>
-         <option value="22">
-          Jammu
-         </option>
-         <option value="23">
-          Nepal
-         </option>
-         <option value="34">
-          BanglaDesh
-         </option>
-         <option value="37">
-          Tanzania
-         </option>
-         <option value="38">
-          Kenya
-         </option>
-         <option value="39">
-          Indonesia
-         </option>
-         <option value="40">
-          Sudan
-         </option>
-         <option value="41">
-          TamilnaduCA1
-         </option>
-         <option value="43">
-          Yemen
-         </option>
-         <option value="45">
-          Nigeria
-         </option>
-         <option value="46">
-          Afghanistan
-         </option>
-         <option value="47">
-          JAMMU_CO
-         </option>
-         <option value="48">
-          PUNJAB_CA1
-         </option>
-         <option value="49">
-          PUNJAB_CA2
-         </option>
-         <option value="50">
-          PUNJAB_ASR
-         </option>
-         <option value="52">
-          PUNJAB_LDH
-         </option>
-         <option value="54">
-          HP_CA1
-         </option>
-         <option value="55">
-          HP_CA2
-         </option>
-         <option value="57">
-          HARYANA_CA1
-         </option>
-         <option value="58">
-          HARYANA_CA2
-         </option>
-         <option value="59">
-          HARYANA_AMB
-         </option>
-         <option value="60">
-          DELHI_CO
-         </option>
-         <option value="61">
-          UP_CA1
-         </option>
-         <option value="62">
-          UP_CA2
-         </option>
-         <option value="65">
-          UP_VAR
-         </option>
-         <option value="66">
-          UK_CA1
-         </option>
-         <option value="67">
-          UK_CA2
-         </option>
-         <option value="68">
-          UK_DEH
-         </option>
-         <option value="69">
-          BIHAR_CA1
-         </option>
-         <option value="70">
-          BIHAR_CA2
-         </option>
-         <option value="75">
-          WB_CA1
-         </option>
-         <option value="77">
-          WB_KOL
-         </option>
-         <option value="78">
-          NE_CA1
-         </option>
-         <option value="79">
-          NE_CA2
-         </option>
-         <option value="80">
-          NE_GUH
-         </option>
-         <option value="81">
-          AP_CA1
-         </option>
-         <option value="82">
-          AP_HYD
-         </option>
-         <option value="83">
-          KERALA_CA1
-         </option>
-         <option value="84">
-          TN_CA1
-         </option>
-         <option value="86">
-          MP_CA1
-         </option>
-         <option value="87">
-          MP_CA2
-         </option>
-         <option value="93">
-          GUJARAT_CA1
-         </option>
-         <option value="95">
-          RWANDA
-         </option>
-         <option value="96">
-          BURUNDI
-         </option>
-         <option value="97">
-          NE_CA3
-         </option>
-         <option value="98">
-          NE_CA4
-         </option>
-         <option value="101">
-          AP_CA2
-         </option>
-         <option value="103">
-          UP_CA3
-         </option>
-         <option value="104">
-          Chandigarh
-         </option>
-         <option value="105">
-          USA
-         </option>
-         <option value="108">
-          AP_CA3
-         </option>
-         <option value="110">
-          UP_KAN
-         </option>
-         <option value="111">
-          UP_AGR
-         </option>
-         <option value="183">
-          PUNJAB_BAT
-         </option>
-         <option value="187">
-          PUNJAB_PTK
-         </option>
-         <option value="190">
-          HP_KAN
-         </option>
-         <option value="194">
-          HARYANA_HIS
-         </option>
-         <option value="196">
-          NCR_GUR
-         </option>
-         <option value="197">
-          NCR_GAZ
-         </option>
-         <option value="203">
-          UP_LUC
-         </option>
-         <option value="204">
-          UP_BAR
-         </option>
-         <option value="208">
-          UP_GOR
-         </option>
-         <option value="214">
-          BIHAR_PAT
-         </option>
-         <option value="216">
-          JHARKHAND_CA1
-         </option>
-         <option value="217">
-          JHARKHAND_RAN
-         </option>
-         <option value="224">
-          NE_CA5
-         </option>
-         <option value="225">
-          NE_CA6
-         </option>
-         <option value="229">
-          AP_VIS
-         </option>
-         <option value="233">
-          MAH_CA1
-         </option>
-         <option value="234">
-          MAH_CA2
-         </option>
-         <option value="237">
-          CHATTISGARH_CA1
-         </option>
-         <option value="238">
-          ODISHA_CA1
-         </option>
-         <option value="239">
-          RAJASTHAN_CA1
-         </option>
-         <option value="240">
-          RAJASTHAN_CA2
-         </option>
-         <option value="241">
-          RAJASTHAN_JAI
-         </option>
-         <option value="276">
-          AP_VIJ
-         </option>
-         <option value="277">
-          KARNATAKA_CA1
-         </option>
-         <option value="283">
-          Mongolia
-         </option>
-         <option value="284">
-          Mauritius
-         </option>
-         <option value="286">
-          Kuwait
-         </option>
-         <option value="287">
-          Uganda
-         </option>
-         <option value="288">
-          Thailand
-         </option>
-         <option value="289">
-          Zambia
-         </option>
-         <option value="290">
-          Saudi Arabia
-         </option>
-         <option value="291">
-          Ethopia
-         </option>
-         <option value="292">
-          Srilanka
-         </option>
-         <option value="293">
-          Maldives
-         </option>
-         <option value="294">
-          Ethiopia
-         </option>
-         <option value="295">
-          Syria
-         </option>
-         <option value="296">
-          Iraq
-         </option>
-         <option value="297">
-          Cameroon
-         </option>
-         <option value="298">
-          Egypt
-         </option>
-         <option value="299">
-          Ghana
-         </option>
-         <option value="300">
-          Eritrea
-         </option>
-         <option value="305">
-          Kerala_CA2
-         </option>
-         <option value="384">
-          China
-         </option>
-         <option value="392">
-          Malawi
-         </option>
-         <option value="393">
-          Lesotho
-         </option>
-         <option value="394">
-          Dr Congo
-         </option>
-         <option value="395">
-          South Africa
-         </option>
-         <option value="399">
-          Zimbabwe
-         </option>
-         <option value="401">
-          LATVIA
-         </option>
-         <option value="403">
-          Niger
-         </option>
-         <option value="404">
-          Tajikistan
-         </option>
-         <option value="405">
-          Srinagar_CO
-         </option>
-         <option value="408">
-          NE_MAN
-         </option>
-         <option value="443">
-          Malaysia
-         </option>
-         <option value="465">
-          KERELA_CA2
-         </option>
-         <option value="483">
-          HP_CA3
-         </option>
-         <option value="491">
-          Kazakhstan
-         </option>
-         <option value="492">
-          Russia
-         </option>
-         <option value="499">
-          Colombia
-         </option>
-         <option value="500">
-          UP_ALL
-         </option>
-         <option value="501">
-          Haryana_CA3
-         </option>
-         <option value="502">
-          Haryana_rohtak
-         </option>
-         <option value="504">
-          Canada
-         </option>
-         <option value="554">
-          PUNJAB_CA3
-         </option>
-         <option value="555">
-          Assam_CA1
-         </option>
-         <option value="556">
-          Assam_CA2
-         </option>
-         <option value="557">
-          Assam_CA3
-         </option>
-         <option value="558">
-          Assam_GUH
-         </option>
-         <option value="600">
-          Haryana_Yamn
-         </option>
-         <option value="603">
-          KARNATAKA_CA2
-         </option>
-         <option value="604">
-          South Sudan
-         </option>
-         <option value="605">
-          Mozambique
-         </option>
-         <option value="692">
-          NCR_CA1
-         </option>
-         <option value="693">
-          NCR_CA2
-         </option>
-         <option value="707">
-          Assam_Jorhat
-         </option>
-         <option value="708">
-          Assam_Tinsukia
-         </option>
-         <option value="709">
-          TLN_CA1
-         </option>
-         <option value="710">
-          HP_CA4
-         </option>
-         <option value="712">
-          The Gambia
-         </option>
-         <option value="713">
-          Congo Brazzaville
-         </option>
-         <option value="714">
-          Guinea
-         </option>
-         <option value="715">
-          TN_CA2
-         </option>
-         <option value="720">
-          Somalia
-         </option>
-         <option value="725">
-          UP_CA4
-         </option>
-         <option value="726">
-          UP_CA5
-         </option>
-         <option value="727">
-          Imphal150617
-         </option>
-         <option value="731">
-          Angola
-         </option>
-         <option value="733">
-          Mali
-         </option>
-         <option value="734">
-          Palestine
-         </option>
-         <option value="735">
-          Jordan
-         </option>
-         <option value="736">
-          OMAN
-         </option>
-         <option value="737">
-          Kota Office 1
-         </option>
-         <option value="738">
-          Kota Office 2
-         </option>
-         <option value="739">
-          Ivory Coast
-         </option>
-         <option value="740">
-          Darjeeling030517
-         </option>
-         <option value="741">
-          Gangtok230517
-         </option>
-         <option value="742">
-          Darjeeling250517
-         </option>
-         <option value="743">
-          Jind100517
-         </option>
-         <option value="744">
-          Thrissur100517
-         </option>
-         <option value="745">
-          Vijaywada130517
-         </option>
-         <option value="746">
-          Pune130517
-         </option>
-         <option value="747">
-          Imphal130517
-         </option>
-         <option value="748">
-          Yamunanagar130617
-         </option>
-         <option value="749">
-          Bangaluru130517
-         </option>
-         <option value="750">
-          Rohtak170517
-         </option>
-         <option value="751">
-          Pallakad170517
-         </option>
-         <option value="752">
-          Kannur180517
-         </option>
-         <option value="753">
-          Hyderabad200517
-         </option>
-         <option value="754">
-          Rajamundry200517
-         </option>
-         <option value="755">
-          Chennai200517
-         </option>
-         <option value="756">
-          Shillong020517
-         </option>
-         <option value="757">
-          Karnal240517
-         </option>
-         <option value="758">
-          Warrangal270517
-         </option>
-         <option value="759">
-          Patna270517
-         </option>
-         <option value="760">
-          Siliguri270517
-         </option>
-         <option value="761">
-          Guwahati300517
-         </option>
-         <option value="762">
-          Shillong300517
-         </option>
-         <option value="763">
-          Kotayam030517
-         </option>
-         <option value="764">
-          Trivandram040517
-         </option>
-         <option value="765">
-          Itanagar050517
-         </option>
-         <option value="766">
-          Hubli060517
-         </option>
-         <option value="767">
-          Kochi080517
-         </option>
-         <option value="769">
-          Agartala090517
-         </option>
-         <option value="770">
-          Jammu100517
-         </option>
-         <option value="771">
-          Kolkatta100617
-         </option>
-         <option value="772">
-          Asansol100617
-         </option>
-         <option value="773">
-          Itanagar010617
-         </option>
-         <option value="774">
-          Srinagar140617
-         </option>
-         <option value="775">
-          Jameshedpur170617
-         </option>
-         <option value="776">
-          Aizwal020617
-         </option>
-         <option value="777">
-          Ranchi240617
-         </option>
-         <option value="778">
-          Patna030617
-         </option>
-         <option value="779">
-          Newdelhi030617
-         </option>
-         <option value="780">
-          Agartala070617
-         </option>
-         <option value="781">
-          Newdelhi080217
-         </option>
-         <option value="782">
-          Gangtok300417
-         </option>
-         <option value="783">
-          Kochi220417
-         </option>
-         <option value="784">
-          Kannur250417
-         </option>
-         <option value="785">
-          Calicut280417
-         </option>
-         <option value="786">
-          Bhubneswar290417
-         </option>
-         <option value="787">
-          Guwahati280417
-         </option>
-         <option value="788">
-          Gorakhpur130517
-         </option>
-         <option value="789">
-          haridwar200517
-         </option>
-         <option value="790">
-          Varanasi280517
-         </option>
-         <option value="791">
-          Orissa_CA2
-         </option>
-         <option value="792">
-          patna31052017
-         </option>
-         <option value="793">
-          Delhi03062017
-         </option>
-         <option value="794">
-          Itanagar050617
-         </option>
-         <option value="795">
-          Burkina Faso
-         </option>
-         <option value="796">
-          Jammu100617
-         </option>
-         <option value="798">
-          Agartala090617
-         </option>
-         <option value="799">
-          Imphal120617
-         </option>
-         <option value="800">
-          Rajasthan_CA3
-         </option>
-         <option value="801">
-          ODHISA_CA2
-         </option>
-         <option value="802">
-          Kohima210617
-         </option>
-         <option value="803">
-          Djibouti
-         </option>
-         <option value="804">
-          UAE (United Arab Emirates)
-         </option>
-         <option value="805">
-          Germany
-         </option>
-         <option value="806">
-          Iran
-         </option>
-         <option value="807">
-          Chad
-         </option>
-         <option value="808">
-          Itanagar_25052018
-         </option>
-         <option value="809">
-          Guwahati_1062018
-         </option>
-         <option value="810">
-          Bhubneshwar_11052018
-         </option>
-         <option value="811">
-          Patna_30052018
-         </option>
-         <option value="812">
-          NewDelhi_2062018
-         </option>
-         <option value="813">
-          Jammu_16062018
-         </option>
-         <option value="814">
-          Thrissur_26052018
-         </option>
-         <option value="815">
-          Shillong_18052018
-         </option>
-         <option value="816">
-          Kannur_24052018
-         </option>
-         <option value="817">
-          Ranchi_19052018
-         </option>
-         <option value="818">
-          Karnal_17052018
-         </option>
-         <option value="819">
-          rohtak_24052018
-         </option>
-         <option value="820">
-          Pb_CA4
-         </option>
-         <option value="821">
-          Pb_CA5
-         </option>
-         <option value="822">
-          Delhi29042018
-         </option>
-         <option value="823">
-          Bhubaneswar
-         </option>
-         <option value="824">
-          Karnal
-         </option>
-         <option value="825">
-          Shillong
-         </option>
-         <option value="826">
-          Ranchi
-         </option>
-         <option value="827">
-          Bengaluru
-         </option>
-         <option value="828">
-          Rohtak
-         </option>
-         <option value="829">
-          Kannur
-         </option>
-         <option value="830">
-          Itanagar
-         </option>
-         <option value="831">
-          Thrissur
-         </option>
-         <option value="832">
-          Patna
-         </option>
-         <option value="833">
-          Guwahati
-         </option>
-         <option value="834">
-          New Delhi
-         </option>
-         <option value="836">
-          Bangluru19052018
-         </option>
-         <option value="837">
-          Imphal 24052018
-         </option>
-         <option value="838">
-          Aizwal26062018
-         </option>
-         <option value="839">
-          Kohima05072018
-         </option>
-         <option value="840">
-          Guwahati09072018
-         </option>
-        </select>
-       </td>
-      </tr>
-      <tr>
-       <td colspan="2">
-       </td>
-      </tr>
-     </table>
+    <div id="container">
+        <div id="map"></div>
+        <div id="sidebar">
+            <h3 style="flex-grow: 0">Request</h3>
+            <pre style="flex-grow: 1" id="request"></pre>
+            <h3 style="flex-grow: 0">Response</h3>
+            <pre style="flex-grow: 1" id="response"></pre>
+        </div>
     </div>
-   </div>
-   <div class="login_button">
-    <input alt="login" id="iBtnLogins" name="iBtnLogins" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("iBtnLogins", "", true, "1", "", false, false))' src="login_images/login_icon.png" type="image"/>
-   </div>
-   <div class="forget_password">
-    <a href="forgetpassword.aspx">
-     <img alt="staff" height="48" src="login_images/f_p.png" width="101"/>
-    </a>
-   </div>
-   <div class="staff_mail">
-    <a href="https://www.google.com/a/lpu.co.in/ServiceLogin?service=mail&amp;passive=true&amp;rm=false&amp;continue=https://mail.google.com/a/lpu.co.in/&amp;ss=1&amp;ltmpl=default&amp;ltmplcache=2" target="_blank">
-     <img alt="staff" height="50" src="login_images/staff_mail.png" width="98"/>
-    </a>
-   </div>
-   <div class="student_mail">
-    <a href="https://www.outlook.com/" target="_blank">
-     <img alt="student" height="55" src="login_images/student_mail_icon.png" width="106"/>
-    </a>
-   </div>
-  </div>
-  <div class="download">
-   Download Our Official App
-  </div>
-  <div class="download_icon">
-   <a href="https://itunes.apple.com/in/app/lputouch/id509819753?mt=8" target="_blank">
-    <img alt="apple" height="50" src="login_images/apple_icon.png" width="49"/>
-   </a>
-   <a href="https://play.google.com/store/apps/details?id=ums.lovely.university" target="_blank">
-    <img alt="android" height="50" src="login_images/android_icon.png" width="49"/>
-   </a>
-  </div>
-  <div style="position: absolute; bottom: 0; right: 10px;">
-   <style type="text/css">
-    .padding
-  {
-      padding-top:5px;
-      padding-bottom:5px;
-  }
-   </style>
-  </div>
-  <script type="text/javascript">
-   //<![CDATA[
-Sys.Application.add_init(function() {
-  $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"filterMode":2,"id":"FilteredTextBoxExtender1","invalidChars":"~!@#$%^\u0026*()_+=-`{}[]|\\:;\"\u0027\u003c\u003e,?/"}, null, null, $get("txtU"));
-});
-//]]>
-  </script>
- </div>
-</form>
-<script type="text/javascript">
- $('#clock').countdown('2016/10/18 14:00:00')
-.on('update.countdown', function(event) {
-   var totalHours = event.offset.totalDays * 24 + event.offset.hours;
-   $(this).html('<strong>' + event.strftime('<b>%D Days</b> <br/><span class="clock"> %H : %M : %S </span>'));
 
-})
-.on('finish.countdown', function(event) {
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+        defer></script>
+    <script>
+        // @ts-nocheck TODO remove when fixed
 
-   $(this).html('<strong>YouthVibes Starts</strong>');
-   $(".countdown").show().delay(10000).queue(function(n) {
-       $(this).hide(); n();
-   });
+        function initMap(): void {
+            const bounds = new google.maps.LatLngBounds();
+            const markersArray: google.maps.Marker[] = [];
 
-});
-</script>
-<script type="text/javascript">
- (function(){window['__CF$cv$params']={r:'7250ebba0ccd8e92',m:'Dh47RHXhzeUQpU7HmZ3dOe5sgv9hE8lZszxfs3Xux1s-1656864936-0-Ac1eYIjikdwx6e3iszMWSGQQzVhUJZy5gQm+PfxtUpRd0UYWBJe+ktrCh4C4JrEbw98yfU+8Xo99GfNKEPkzd9b2eaV9N6I4Df3chpavEthOVx04gXy0XJrFAhakvGj8d66Xx5E48PywMoJtpWJN6q4=',s:[0x1aac1df66b,0x3a79e07a5f],u:'/cdn-cgi/challenge-platform/h/b'}})();
-</script>
-<script crossorigin="anonymous" data-cf-beacon='{"rayId":"7250ebba0ccd8e92","token":"c5db119ec2de4adc8b8b1d95388884a3","version":"2022.6.0","si":100}' defer="" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194">
-</script>
+            const map = new google.maps.Map(
+                document.getElementById("map") as HTMLElement,
+                {
+                    center: { lat: 55.53, lng: 9.4 },
+                    zoom: 10,
+                }
+            );
+
+            // initialize services
+            const geocoder = new google.maps.Geocoder();
+            const service = new google.maps.DistanceMatrixService();
+
+            // build request
+            const origin1 = { lat: 55.93, lng: -3.118 };
+            const origin2 = "Greenwich, England";
+            const destinationA = "Stockholm, Sweden";
+            const destinationB = { lat: 50.087, lng: 14.421 };
+
+            const request = {
+                origins: [origin1, origin2],
+                destinations: [destinationA, destinationB],
+                travelMode: google.maps.TravelMode.DRIVING,
+                unitSystem: google.maps.UnitSystem.METRIC,
+                avoidHighways: false,
+                avoidTolls: false,
+            };
+
+            // put request on page
+            (document.getElementById("request") as HTMLDivElement).innerText =
+                JSON.stringify(request, null, 2);
+
+            // get distance matrix response
+            service.getDistanceMatrix(request).then((response) => {
+                // put response
+                (document.getElementById("response") as HTMLDivElement).innerText =
+                    JSON.stringify(response, null, 2);
+
+                // show on map
+                const originList = response.originAddresses;
+                const destinationList = response.destinationAddresses;
+
+                deleteMarkers(markersArray);
+
+                const showGeocodedAddressOnMap = (asDestination: boolean) => {
+                    const handler = ({ results }: google.maps.GeocoderResponse) => {
+                        map.fitBounds(bounds.extend(results[0].geometry.location));
+                        markersArray.push(
+                            new google.maps.Marker({
+                                map,
+                                position: results[0].geometry.location,
+                                label: asDestination ? "D" : "O",
+                            })
+                        );
+                    };
+
+                    return handler;
+                };
+
+                for (let i = 0; i < originList.length; i++) {
+                    const results = response.rows[i].elements;
+
+                    geocoder
+                        .geocode({ address: originList[i] })
+                        .then(showGeocodedAddressOnMap(false));
+
+                    for (let j = 0; j < results.length; j++) {
+                        geocoder
+                            .geocode({ address: destinationList[j] })
+                            .then(showGeocodedAddressOnMap(true));
+                    }
+                }
+            });
+        }
+
+        function deleteMarkers(markersArray: google.maps.Marker[]) {
+            for (let i = 0; i < markersArray.length; i++) {
+                markersArray[i].setMap(null);
+            }
+
+            markersArray = [];
+        }
+
+        declare global {
+            interface Window {
+                initMap: () => void;
+            }
+        }
+        window.initMap = initMap;
+        export { };
+
+    </script>
 </body>
+
 </html>

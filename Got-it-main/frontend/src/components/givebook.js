@@ -34,7 +34,7 @@ function Givebook() {
         data.append("year", year);
         data.append("image", file);
 
-        axios.post('https://got-it-in.herokuapp.com/give/book', data, config)
+        axios.post('http://18.237.33.67:5500/give/book', data, config)
             .then(() => {
 
                 alert("successfully donated")

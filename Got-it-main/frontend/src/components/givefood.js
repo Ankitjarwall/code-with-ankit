@@ -38,7 +38,7 @@ function Givefood() {
         data.append("expiry", expiry);
         data.append("image", file);
 
-        axios.post('https://got-it-in.herokuapp.com/give/food', data, config)
+        axios.post('http://18.237.33.67:5500/give/food', data, config)
             .then(() => {
                 alert("successfully donated")
             }).catch(err => {

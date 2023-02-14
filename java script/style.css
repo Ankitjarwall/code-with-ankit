@@ -1,0 +1,22 @@
+#current{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    width:150px;
+    height:25rem;
+    background-color:black;
+    color: white;
+    border-radius: 12rem;
+}
+#time{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size:100px;
+    font-family: cursive;
+}
+#curr_hour{
+    position: relative;
+    top:50px;
+}

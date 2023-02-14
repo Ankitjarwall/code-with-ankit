@@ -29,7 +29,7 @@ function Takemed() {
             }
 
             try {
-                const { data } = await axios.get("https://got-it-in.herokuapp.com/take/heal", config);
+                const { data } = await axios.get("http://18.237.33.67:5500/take/heal", config);
                 console.log(data);
                 setMeds(data);
 
@@ -60,7 +60,7 @@ function Takemed() {
                     {meds.map((med, index) => {
                         return <div className="col-sm-4">
                             <div className="card">
-                                <img src={`https://got-it-in.herokuapp.com/${med.image}`} className="card-img-top" alt="..." />
+                                <img src={`http://18.237.33.67:5500/${med.image}`} className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Medicine name:{med.name}</h5>
                                     <p className="card-text">Used for:{med.purpose}</p>

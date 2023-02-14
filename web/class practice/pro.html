@@ -1,29 +1,52 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title>Anime</title>
-</head>
 
 <body>
-    <nav>
-        <button>Menu</button>
-        <button>Home</button>
-        <button>Contact us</button>
-    </nav>
-    <h1>Anime Wallpaper</h1>
-    <img src="../class practice/images/anime.webp" alt="Anemi image">
-    <div>
-        <img class="image" src="../class practice/images/772df9a9b169ad35e683a58c1c9fd602.jpg">
-        <img class="image"
-            src="../class practice/images/anime-anime-boys-picture-in-picture-kimetsu-no-yaiba-kamado-tanjirō-hd-wallpaper-preview.jpg">
-    </div>
-    <div>
-        <img class="image" src="../class practice/images/cool-anime-wallpaper-hd.jpg">
-        <img class="image"
-            src="../class practice/images/HD-wallpaper-anime-boy-anime-boy-anime-boys-cute-cute-anime-boy-cute-anime-boys-lonely-sad-anime-boy-sad-anime-boys-thumbnail.jpg">
+    <button id="find-me">Share my location</button>
+    <button id="stop-me">Stop Sharing my location</button><br />
+    <p id="status"></p>
+    <a id="map-link" target="_blank"></a>
+    <script>
+        var state;
+        function geoFindMe() {
 
-    </div>
+            const status = document.querySelector('#status');
+            const mapLink = document.querySelector('#map-link');
+
+            mapLink.href = '';
+            mapLink.textContent = '';
+
+            function success(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                status.textContent = '';
+                mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+                mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+            }
+
+            function error() {
+                status.textContent = 'Unable to retrieve your location';
+            }
+
+            if (!navigator.geolocation) {
+                status.textContent = 'Geolocation is not supported by your browser';
+            } else {
+                navigator.geolocation.getCurrentPosition(success, error);
+            }
+
+        }
+        var myTimeout;
+        function start() {
+            myTimeout = setInterval(geoFindMe, 5000);
+        }
+        function Stop() {
+            console.log('success');
+            clearTimeout(myTimeout);
+        }
+        document.querySelector('#find-me').addEventListener('click', start);
+        document.querySelector('#stop-me').addEventListener('click', Stop);
+
+    </script>
 </body>
 
 </html>

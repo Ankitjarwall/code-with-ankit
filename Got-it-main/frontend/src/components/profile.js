@@ -44,7 +44,7 @@ function Profile() {
             }
 
             try {
-                const { data } = await axios.get("https://got-it-in.herokuapp.com/profile/user", config);
+                const { data } = await axios.get("http://18.237.33.67:5500/profile/user", config);
 
                 setUser(data);
 
@@ -64,7 +64,7 @@ function Profile() {
             }
 
             try {
-                const bookdata = await axios.get("https://got-it-in.herokuapp.com/profile/book", bookconfig);
+                const bookdata = await axios.get("http://18.237.33.67:5500/profile/book", bookconfig);
 
                 setBook(bookdata.data);
 
@@ -85,7 +85,7 @@ function Profile() {
             }
 
             try {
-                const clothdata = await axios.get("https://got-it-in.herokuapp.com/profile/cloth", clothconfig);
+                const clothdata = await axios.get("http://18.237.33.67:5500/profile/cloth", clothconfig);
 
                 setCloth(clothdata.data);
 
@@ -106,7 +106,7 @@ function Profile() {
             }
 
             try {
-                const fooddata = await axios.get("https://got-it-in.herokuapp.com/profile/food", foodconfig);
+                const fooddata = await axios.get("http://18.237.33.67:5500/profile/food", foodconfig);
 
                 setFood(fooddata.data);
 
@@ -127,7 +127,7 @@ function Profile() {
             }
 
             try {
-                const toydata = await axios.get("https://got-it-in.herokuapp.com/profile/play", toyconfig);
+                const toydata = await axios.get("http://18.237.33.67:5500/profile/play", toyconfig);
 
                 setToy(toydata.data);
 
@@ -148,7 +148,7 @@ function Profile() {
             }
 
             try {
-                const meddata = await axios.get("https://got-it-in.herokuapp.com/profile/heal", medconfig);
+                const meddata = await axios.get("http://18.237.33.67:5500/profile/heal", medconfig);
 
                 setMed(meddata.data);
 
@@ -210,7 +210,7 @@ function Profile() {
                     <div className="col-sm-12">
 
                         <div className="profile-user-box card-box bg-custom">
-                            <div className=" mr-3"><img src={`https://got-it-in.herokuapp.com/${user.image}`} alt="" className="thumb-lg rounded-circle" /></div>
+                            <div className=" mr-3"><img src={`http://18.237.33.67:5500/${user.image}`} alt="" className="thumb-lg rounded-circle" /></div>
                             <div className="media-body text-white">
                                 <h4 className="mt-1 mb-1 font-18">{user.username}</h4>
                                 <p className="mt-1 mb-1 font-13">Registration number:{user.registration}</p>

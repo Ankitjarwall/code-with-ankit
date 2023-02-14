@@ -31,7 +31,7 @@ function Navbar() {
             }
 
             try {
-                const { data } = await axios.get("https://got-it-in.herokuapp.com/profile/user", config);
+                const { data } = await axios.get("http://18.237.33.67:5500/profile/user", config);
 
                 setUser(data);
 

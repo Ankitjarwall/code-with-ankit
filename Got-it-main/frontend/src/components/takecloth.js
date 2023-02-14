@@ -27,7 +27,7 @@ function Takecloth() {
             }
 
             try {
-                const { data } = await axios.get("https://got-it-in.herokuapp.com/take/cloth", config);
+                const { data } = await axios.get("http://18.237.33.67:5500/take/cloth", config);
                 console.log(data);
                 setCloths(data);
 
@@ -57,7 +57,7 @@ function Takecloth() {
                     {cloths.map((cloth, index) => {
                         return <div className="col-sm-4">
                             <div className="card">
-                                <img src={`https://got-it-in.herokuapp.com/${cloth.image}`} className="card-img-top" alt="..." />
+                                <img src={`http://18.237.33.67:5500/${cloth.image}`} className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">Cloth name:{cloth.name}</h5>
                                     <p className="card-text">Size:{cloth.size}</p>
