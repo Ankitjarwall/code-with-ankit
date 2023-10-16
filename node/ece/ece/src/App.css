@@ -1,0 +1,33 @@
+/* RadarFusionComponent.css */
+
+.android-large {
+  background-color: #1963a5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.android-large .div {
+  background-color: #1963a5;
+  overflow: hidden;
+  width: 360px;
+  height: 800px;
+  position: relative;
+}
+
+.android-large .radar-fusion {
+  position: absolute;
+  width: 360px;
+  top: 44px;
+  left: 0;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/* Add the rest of your styles here */
