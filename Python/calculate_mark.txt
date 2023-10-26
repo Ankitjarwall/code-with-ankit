@@ -1,0 +1,2 @@
+name	stream	Math Marks	Hindi Marks	English Marks	Avg		CGPA"
+Ankit	bca		45				56				45		151518.67	454556	15151866.67
