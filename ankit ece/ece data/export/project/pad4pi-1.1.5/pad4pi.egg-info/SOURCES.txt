@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.py
+pad4pi/__init__.py
+pad4pi/rpi_gpio.py
+pad4pi.egg-info/PKG-INFO
+pad4pi.egg-info/SOURCES.txt
+pad4pi.egg-info/dependency_links.txt
+pad4pi.egg-info/requires.txt
+pad4pi.egg-info/top_level.txt

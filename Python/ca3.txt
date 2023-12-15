@@ -1,0 +1,6 @@
+
+
+	Text : Ankit
+	Uppercase letters count: 1
+	Lowercase letters count:4
+

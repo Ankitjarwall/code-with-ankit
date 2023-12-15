@@ -1,0 +1,5 @@
+[('Lily', 56), ('Adam', 22), ('Danil', 35), ('Dave', 45), ('Grace', 24), ('Helen', 38)]
+
+Guests Under 18 : [('Adam', 22), ('Grace', 24)]
+
+Guests avove 30:[('Lily', 56), ('Danil', 35), ('Dave', 45), ('Helen', 38)]
