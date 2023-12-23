@@ -11,8 +11,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 aws.config.update({
-    accessKeyId: 'AKIA6FRT5ELCELWHG6LK',
-    secretAccessKey: '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',
+    accessKeyId: ' ', //here add
+    secretAccessKey: '', //here add
     region: 'us-east-1',
 });
 
