@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Form</title>
+</head>
+
+<body>
+    <form id="emailForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("emailForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            var formData = new FormData(this);
+
+            fetch("https://script.google.com/macros/s/AKfycbz1ptRUHkM3cfc0RtE5-BDfIq5VqL-ngk1P0o6cvlB9bDoB-elVDDBc9-KVHuuRq1NN/exec", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                    }
+                    return response.json(); // Assuming the response is JSON
+                })
+                .then(data => {
+                    console.log(data); // Log the response data
+                    // Optionally, you can display a success message to the user
+                    alert("Email submitted successfully!");
+                })
+                .catch(error => {
+                    console.error("There was a problem with the fetch operation:", error);
+                    // Optionally, you can display an error message to the user
+                    alert("An error occurred. Please try again later.");
+                });
+        });
+    </script>
+</body>
+
+</html>
